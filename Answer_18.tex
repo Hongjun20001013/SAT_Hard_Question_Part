@@ -1,0 +1,253 @@
+\documentclass[12pt]{article}
+\everymath{\displaystyle}
+\usepackage{unicode-math}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{pifont}
+\usepackage{xcolor}
+\newcounter{questionnum}
+\setcounter{questionnum}{0}
+\usepackage{eso-pic} % for page background
+
+% --------- 主题颜色设置 ---------
+\definecolor{novelblue}{RGB}{70,60,150}
+\definecolor{headerbg}{RGB}{240,240,255}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{novelblue}\leaders\hrule height 0.4pt\hfill}}
+
+% --------- 页眉背景色条 ---------
+\newcommand{\headbackground}{
+  \AddToShipoutPictureBG*{
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[blue!5!purple!10] (current page.north west) rectangle ([yshift=-60pt]current page.north east);
+    \end{tikzpicture}
+  }
+}
+
+% --------- 页眉设置 ---------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\color{novelblue}\textbf{\textbf{Novel Prep} }}
+\fancyhead[C]{\color{novelblue}\textbf {SAT Preparation}}
+\fancyhead[R]{\color{novelblue}\textbf{Jack Zeng}}
+
+
+\newtcolorbox{SATCard}[1][]{%
+  enhanced,
+  colback=white,
+  colframe=novelblue,
+  coltitle=white,
+  boxrule=0.6pt,
+  arc=4pt,
+  boxsep=5pt,
+  left=8pt, right=8pt, top=10pt, bottom=10pt,
+  sharp corners=south,
+  drop shadow south east,
+  #1
+}
+
+% --------- 顶部 Mark for Review 栏 ---------
+\newcommand{\markforreview}{
+  \stepcounter{questionnum} % 自动递增题号
+  \begin{tikzpicture}[scale=1.1]
+    % 黑色题号
+    \fill[black] (0,0) rectangle (0.8,0.6);
+    \node[white, font=\bfseries\large] at (0.4,0.3) {\thequestionnum};
+
+    % 灰底主栏
+    \fill[gray!10] (0.8,0) rectangle (14.5,0.6);
+
+    % Mark for Review
+    \node[anchor=west, font=\small] at (1.2,0.3) {\ding{72} \hspace{2pt}Mark for Review};
+
+    % ABC 按钮区域
+    \draw[thick, rounded corners=3pt] (13.5,0.12) rectangle (14.5,0.48);
+    \node[font=\bfseries\normalsize] at (14.0,0.3) {ABC};
+  \end{tikzpicture}
+
+
+  \newcommand{\choiceboxcircled}[2]{%
+  \begin{tcolorbox}[
+    colback=white,
+    colframe=black,
+    boxrule=0.5pt,
+    rounded corners=6pt,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    width=\linewidth
+  ]
+    \textbf{\large\textcircled{\textbf{#1}}} \ #2
+  \end{tcolorbox}
+}
+}
+
+% --------- 选项框样式 ---------
+\newcommand{\choicebox}[2]{%
+  \begin{tcolorbox}[
+    colback=white, 
+    colframe=novelblue,
+    boxrule=0.5pt, 
+    rounded corners=4pt, 
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    width=\linewidth
+  ]
+  \textbf{#1.} \ #2
+  \end{tcolorbox}
+}
+
+
+
+\begin{document}
+
+
+
+
+
+\section*{SAT Hard Question 18}
+\noindent\markforreview
+\vspace{1em}
+
+The function $f$ is defined by $f(x) = -39^x$. The function $g$ is a decreasing linear function.  
+In the $xy$-plane, the graphs of $y = f(x)$ and $y = g(x)$ intersect at two points, $(h, j)$ and $(k, m)$, where $j > m$.  
+When $g(x) < f(x)$, which of the following must also be true?(D)
+
+\choicebox{A}{$x > k$}
+\choicebox{B}{$x < h$}
+\choicebox{C}{$x > k$ or $x < h$}
+\choicebox{D}{$h < x < k$}
+
+\vspace{2em}
+
+\noindent\markforreview
+\vspace{1em}
+
+A circle in the $xy$-plane has its center at $(-7, 3)$ and has a radius of $9$.  
+An equation of this circle is $x^2 + y^2 + ax + by + c = 0$, where $a$, $b$, and $c$ are constants.  
+What is the value of $c$? (-23)
+
+
+
+\newpage
+
+\noindent\markforreview
+\vspace{1em}
+
+At different times on a certain day, a manager at a theme park recorded the number of visitors.  
+An exponential model gives the estimated number of visitors, $V$, at the theme park $t$ hours after the theme park opened, where $t \leq 3$.  
+Based on the model, 80 visitors were estimated to be at the theme park when it opened,  
+and every 30 minutes the estimated number of visitors increased by 150\% of the number 30 minutes earlier.  
+Which of the following equations best represents this model?(B)
+
+\choicebox{A}{$V = 80(2.5)^{2t}$}
+\choicebox{B}{$V = 80(2.5)^{\frac{t}{30}}$}
+\choicebox{C}{$V = 80(1.5)^{2t}$}
+\choicebox{D}{$V = 80(1.5)^{\frac{t}{30}}$}
+
+\vspace{2em}
+\newpage
+\noindent\markforreview
+\vspace{1em}
+
+The function $m$ gives the predicted body mass $m(t)$, in kilograms (kg), of a male giraffe $t$ days after it was born in a wildlife reserve, where $t \leq 390$.  
+\[
+m(t) = -0.0274\left(\frac{t}{7}\right)^2 + 7.3873\left(\frac{t}{7}\right) + 75.032
+\]  
+Which of the following is the best interpretation of the statement “$m(370)$ is approximately equal to $389$” in this context?(B)
+
+\choicebox{A}{The predicted body mass of a male giraffe was approximately 370 kg 389 days after it was born.}  
+\choicebox{B}{The predicted body mass of a male giraffe was approximately 389 kg 370 days after it was born.}  
+\choicebox{C}{The predicted body mass of a male giraffe was approximately 389 kg $\frac{370}{7}$ days after it was born.}  
+\choicebox{D}{The predicted body mass of a male giraffe was approximately $\frac{370}{7}$ kg 389 days after it was born.}
+
+\vspace{2em}
+
+\noindent\markforreview
+\vspace{1em}
+
+At a hotel, guests used the pool for a total of $t$ hours in March. At the same hotel, guests used the pool for $3.61t$ hours in April.  
+What is the percent increase in the number of hours guests used the pool from March to April?(A)
+
+\choicebox{A}{$2.61\%$}  
+\choicebox{B}{$3.61\%$}  
+\choicebox{C}{$261\%$}  
+\choicebox{D}{$361\%$}
+
+\vspace{2em}
+
+
+\noindent\markforreview
+\vspace{1em}
+
+For data set A, the table summarizes the distribution of the number of pieces of mail received by a business each day during a period of 11 days.(C)
+
+\[
+\begin{array}{|c|c|}
+\hline
+\text{Pieces of mail} & \text{Days} \\
+\hline
+0 & 2 \\
+4 & 2 \\
+5 & 2 \\
+6 & 2 \\
+7 & 1 \\
+8 & 1 \\
+17 & 1 \\
+\hline
+\end{array}
+\]
+
+The data value $17$ is removed from data set A to create data set B, which consists of the remaining 10 data values.  
+Which statement best compares the median of data set A and the median of data set B?
+
+\choicebox{A}{The median of data set B is less than the median of data set A.}  
+\choicebox{B}{The median of data set B is greater than the median of data set A.}  
+\choicebox{C}{The median of data set B is equal to the median of data set A.}  
+\choicebox{D}{There is not enough information to compare the medians of the two data sets.}
+
+\vspace{2em}
+\newpage
+\noindent\markforreview
+\vspace{1em}
+
+Triangle $ABC$ is similar to triangle $DEF$, where $A$ corresponds to $D$ and $C$ corresponds to $F$.  
+Angles $C$ and $F$ are right angles.  
+If $\tan(A) = \sqrt{5}$ and $DF = 53$, what is the length of $DE$?(D)
+
+\choicebox{A}{$\dfrac{53\sqrt{3}}{5}$}  
+\choicebox{B}{$\dfrac{53\sqrt{3}}{2}$}  
+\choicebox{C}{$53\sqrt{5}$}  
+\choicebox{D}{$106$}
+
+\vspace{2em}
+
+\noindent\markforreview
+\vspace{1em}
+
+A triangular pyramid has exactly six edges. Each of these edges is 96 centimeters long.  
+If the surface area of the pyramid is $k\sqrt{3}$ square centimeters, what is the value of $k$?(D)
+
+\choicebox{A}{2304}  
+\choicebox{B}{4608}  
+\choicebox{C}{6912}  
+\choicebox{D}{9216}
+
+
+
+
+
+\end{document}

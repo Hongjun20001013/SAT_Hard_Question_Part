@@ -1,0 +1,384 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% 自定义颜色
+\definecolor{purpleblue}{RGB}{80, 80, 180}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+\definecolor{novelPurple}{RGB}{98, 54, 255} 
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% 主题设置
+\usetheme{Madrid}  
+\usecolortheme{dolphin} 
+
+% 设置字体（移除 fontspec，确保 pdfLaTeX 兼容）
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=white, bg=novelPurple}
+\setbeamercolor{title}{fg=white, bg=purpleblue}
+
+% 封面信息
+\title[SAT Hard Question]{\textbf{SAT Hard Question 16}}
+\author{\textbf{Jack Zeng}}
+\institute{\textcolor{white}{\textbf{Novel Prep}}}
+\date{\today} 
+
+\begin{document}
+
+% --- Title Slide ---
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{flushright}
+        \textcolor{purpleblue}{\Huge \textbf{Novel Prep}}
+    \end{flushright}
+\end{frame}
+
+
+\begin{frame}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 设置浅色渐变背景
+        \shade[top color=softPurple, bottom color=softGray] 
+            (current page.north west) rectangle (current page.south east);
+        
+        % 添加高斯模糊光晕
+        \fill[white, opacity=0.3] (current page.center) circle (4cm);
+        
+        % 主标题
+        \node[align=center] at (current page.center) {
+            {\Huge\bfseries\textcolor{purpleblue}{Novel Prep}} \\[0.5cm]
+            {\Large\itshape\textcolor{lightText}{Excellence in SAT Prep}}
+        };
+
+        % 添加柔和光点（点缀）
+        \foreach \x in {1,2,3,4,5} {
+            \fill[purpleblue, opacity=0.2] (rand*10-5, rand*7-3.5) circle (0.1+\x*0.05);
+        }
+
+        ;
+    \end{tikzpicture}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question: Consecutive Integers and Difference Condition}}
+\small
+For a set of three consecutive integers, the result of subtracting the greatest integer from the sum of the other two integers is $48$. What is the value of the greatest of the three integers?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Algebraic Setup and Solution}}
+\small
+Let the three consecutive integers be $n$, $n+1$, and $n+2$.
+
+Sum of the smaller two integers:
+\[
+n + (n + 1) = 2n + 1
+\]
+
+Subtract the greatest integer:
+\[
+2n + 1 - (n + 2) = 2n + 1 - n - 2 = n - 1
+\]
+
+Set equal to $48$:
+\[
+n - 1 = 48
+\]
+\[
+n = 49
+\]
+
+The greatest integer is:
+\[
+n + 2 = 49 + 2 = \boxed{51}
+\]
+\end{frame}
+
+\begin{frame}{\textbf{Question: Quadratic Function and Ground Impact Time}}
+\small
+The function $h(t) = -16t^2 + b$ estimates an object's height, in feet, above the ground $t$ seconds after the object is dropped, where $b$ is a constant.
+
+The function estimates that the object is $40.96$ feet above the ground when it is dropped at $t = 0$.
+
+How many seconds after being dropped does the function estimate the object will hit the ground?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Solving the Quadratic Equation}}
+\small
+Since $t = 0$ gives $h(0) = b = 40.96$, the function is:
+\[
+h(t) = -16t^2 + 40.96
+\]
+
+Set $h(t) = 0$ to find when the object hits the ground:
+\[
+-16t^2 + 40.96 = 0
+\]
+\[
+16t^2 = 40.96
+\]
+\[
+t^2 = \frac{40.96}{16} = 2.56
+\]
+\[
+t = \sqrt{2.56} = 1.6
+\]
+
+The object hits the ground after:
+\[
+\boxed{1.6} \text{ seconds}
+\]
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Survey Percentages and Totals}}
+\small
+A researcher surveyed undergraduate students, graduate students, and postdoctoral students. The number of undergraduate students surveyed was $7,150\%$ of the number of postdoctoral students surveyed, and the number of graduate students surveyed was $45\%$ of the number of undergraduate students surveyed.
+
+If there were $6,435$ graduate students surveyed, what was the sum of the number of undergraduate students and postdoctoral students surveyed?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Setting Up Proportions and Solving}}
+\small
+Let the number of postdoctoral students be $x$.
+
+Number of undergraduate students:
+\[
+71.5x
+\]
+
+Number of graduate students:
+\[
+0.45 \times 71.5x = 32.175x
+\]
+
+Set equal to $6,435$:
+\[
+32.175x = 6435
+\]
+\[
+x = \frac{6435}{32.175} = 200
+\]
+
+So, number of undergraduate students:
+\[
+71.5 \times 200 = 14,300
+\]
+
+Sum of undergraduate and postdoctoral students:
+\[
+14,300 + 200 = \boxed{14,500}
+\]
+\end{frame}
+
+\begin{frame}{\textbf{Question: Parallel Lines Condition for No Solution}}
+\small
+\[
+16x - 20y = 6y + 8
+\]
+\[
+ty = 8x + \frac{1}{5}
+\]
+
+In the given system of equations, $t$ is a constant. If the system has no solution, what is the value of $t$?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Comparing Slopes for No Solution Condition}}
+\small
+Rewrite both equations in slope-intercept form.
+
+First equation:
+\[
+16x - 20y = 6y + 8
+\]
+\[
+16x - 20y - 6y = 8
+\]
+\[
+16x - 26y = 8
+\]
+\[
+y = \frac{16}{26}x - \frac{8}{26} = \frac{8}{13}x - \frac{4}{13}
+\]
+
+Second equation:
+\[
+ty = 8x + \frac{1}{5}
+\]
+\[
+y = \frac{8}{t}x + \frac{1}{5t}
+\]
+
+For no solution, slopes must be equal:
+\[
+\frac{8}{13} = \frac{8}{t}
+\]
+\[
+t = 13
+\]
+
+So the value of $t$ is:
+\[
+\boxed{13}
+\]
+\end{frame}
+
+\begin{frame}{\textbf{Question: Unit Conversion of Bone Mineral Density}}
+\small
+The bone mineral density of a certain person's thoracic spine was estimated to be $0.812$ grams per square centimeter.
+
+What is this estimated bone mineral density in grams per square millimeter? (1 centimeter = 10 millimeters)
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Converting Area Units}}
+\small
+\[
+1 \text{ cm}^2 = (10 \text{ mm})^2 = 100 \text{ mm}^2
+\]
+
+So,
+\[
+0.812 \text{ g/cm}^2 = \frac{0.812}{100} \text{ g/mm}^2 = 0.00812 \text{ g/mm}^2
+\]
+
+Thus, the answer is:
+\[
+\boxed{0.00812}
+\]
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Product of Roots and Factored Form}}
+\small
+\[
+\frac{5}{9}(5x + 9)(x + \sqrt{5k+9} )(x - \sqrt{5k+9} ) = 0
+\]
+
+In the given equation, $k$ is a positive constant. The product of the solutions to the equation is $72$. What is the value of $k$?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation}}
+\small
+For the solution
+\[x=-\frac{9}{5} , -\sqrt{5k+9}, and \sqrt{5k+9}\]
+
+The product of the solution is 
+\[\frac{9}{5}(5k+9)=72\]
+
+Where \boxed{k=6.2}
+
+\end{frame}
+
+\begin{frame}{\textbf{Question: Surface Area of a Right Rectangular Prism}}
+\small
+A right rectangular prism has a base area of $56t$ square centimeters. The length of the base is $\frac{14}{3}$ cm, and the height is $3$ cm.
+
+What is the expression of the surface area, in cm$^2$, of the prism?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Surface Area Calculation}}
+\small
+\boxed{184t+28}
+
+
+\end{frame}
+
+\begin{frame}{\textbf{Question: Unit Circle, Coordinates, and Trigonometric Ratio}}
+\small
+In the $xy$-plane, a unit circle with center at the origin $O$ contains point $A$ at $(1, 0)$ and point $B$ at $\left( \frac{5}{\sqrt{34}}, -\frac{3}{\sqrt{34}} \right)$.
+
+If $\angle AOB$ measures $p$ radians, what is the value of $\frac{\cos p}{\sin p}$?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation}}
+\small
+We are asked to compute:
+\[
+\frac{\cos p}{\sin p}
+\]
+
+Recall the identity:
+\[
+\frac{\cos p}{\sin p} = \cot p = \frac{1}{\tan p}
+\]
+
+Point $B$ has coordinates:
+\[
+\left( \frac{5}{\sqrt{34}}, -\frac{3}{\sqrt{34}} \right)
+\]
+
+So:
+\[
+\tan p = \frac{\text{y-coordinate}}{\text{x-coordinate}} = \frac{-\frac{3}{\sqrt{34}}}{\frac{5}{\sqrt{34}}} = -\frac{3}{5}
+\]
+
+Thus:
+\[
+\frac{\cos p}{\sin p} = \frac{1}{\tan p} = \frac{1}{ -\frac{3}{5} } = -\frac{5}{3}
+\]
+
+The value is:
+\[
+\boxed{-\frac{5}{3}}
+\]
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question: Maximum Root of a Quadratic Function}}
+\small
+The function $h$ is defined by:
+\[
+h(x) = -\sqrt{x^2+ bx + c} 
+\]
+where $b$ and $c$ are constants. In the $xy$-plane, the graph of $y = h(x)$ contains the points $(2, 0)$ and $\left( 0, -\sqrt{334} \right)$.
+
+If $h(m) = 0$, what is the greatest possible value of $m$?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Solving for Maximum Root}}
+\small
+
+
+Thus, the greatest possible value of $m$ is:
+\[
+\boxed{167}
+\]
+\end{frame}
+
+\begin{frame}{\textbf{Question: Linear Cost Model for Computer Repair}}
+\small
+A computer repair specialist charges \$160 for the first two hours of repair plus an hourly fee for each additional hour. The total cost for $6$ hours of repair is \$360.
+
+What is the function $f$ that gives the total cost, in dollars, for $x$ hours of repair, where $x \geq 2$?
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Constructing the Piecewise Linear Model}}
+\small
+The first two hours cost \$160. For $6$ hours, the total cost is \$360, so the cost of the $4$ additional hours is:
+\[
+360 - 160 = 200
+\]
+
+Hourly fee:
+\[
+\frac{200}{4} = 50
+\]
+
+Model:
+\[
+f(x) = 160 + 50(x - 2) = 50x + 60
+\]
+
+Thus, the function is:
+\[
+\boxed{f(x) = 50x + 60}
+\]
+\end{frame}
+
+
+
+
+\end{document}

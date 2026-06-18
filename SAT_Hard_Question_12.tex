@@ -1,0 +1,460 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% 自定义颜色
+\definecolor{purpleblue}{RGB}{80, 80, 180}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+\definecolor{novelPurple}{RGB}{98, 54, 255} 
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% 主题设置
+\usetheme{Madrid}  
+\usecolortheme{dolphin} 
+
+% 设置字体（移除 fontspec，确保 pdfLaTeX 兼容）
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=white, bg=novelPurple}
+\setbeamercolor{title}{fg=white, bg=purpleblue}
+
+% 封面信息
+\title[SAT Hard Question]{\textbf{SAT Hard Question 12}}
+\author{\textbf{Jack Zeng}}
+\institute{\textcolor{white}{\textbf{Novel Prep}}}
+\date{\today} 
+
+\begin{document}
+
+% --- Title Slide ---
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{flushright}
+        \textcolor{purpleblue}{\Huge \textbf{Novel Prep}}
+    \end{flushright}
+\end{frame}
+
+
+\begin{frame}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 设置浅色渐变背景
+        \shade[top color=softPurple, bottom color=softGray] 
+            (current page.north west) rectangle (current page.south east);
+        
+        % 添加高斯模糊光晕
+        \fill[white, opacity=0.3] (current page.center) circle (4cm);
+        
+        % 主标题
+        \node[align=center] at (current page.center) {
+            {\Huge\bfseries\textcolor{purpleblue}{Novel Prep}} \\[0.5cm]
+            {\Large\itshape\textcolor{lightText}{Excellence in SAT Prep}}
+        };
+
+        % 添加柔和光点（点缀）
+        \foreach \x in {1,2,3,4,5} {
+            \fill[purpleblue, opacity=0.2] (rand*10-5, rand*7-3.5) circle (0.1+\x*0.05);
+        }
+
+        ;
+    \end{tikzpicture}
+\end{frame}
+
+
+
+
+\begin{frame}{\textbf{Question: Solving a Quadratic Equation}}
+
+In the given equation, \( a \) and \( b \) are non-zero constants.  
+Which of the following expressions gives a solution to the equation?
+
+\[
+7ax^2 + (7b - 12a)x - 12b = 0
+\]
+
+\bigskip
+
+\textbf{Choices:}
+\begin{itemize}
+    \item[A.] \(- \dfrac{a}{b} \)
+    \item[B.] \(- \dfrac{b}{a} \)
+    \item[C.] \( \dfrac{a}{b} \)
+    \item[D.] \( \dfrac{b}{a} \)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer Explanation: Solving a Quadratic Equation}}
+
+
+
+\textbf{Correct Answer: B.} \( \boxed{-\dfrac{b}{a}} \)
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Equation with Infinitely Many Solutions}}
+
+In the given equation, \( a \) and \( b \) are constants. The equation has infinitely many solutions. What is the value of \( b \)?
+
+\[
+\frac{ax + b}{3} = \frac{6}{17}x - \frac{13}{12}
+\]
+
+\textbf{Choices:}
+\begin{itemize}
+    \item[A.] \( -\frac{18}{17} \)
+    \item[B.] \( \frac{18}{17} \)
+    \item[C.] \( -\frac{13}{4} \)
+    \item[D.] \( \frac{13}{4} \)
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Answer Explanation: Equation with Infinitely Many Solutions}}
+
+For two expressions to be equal for all values of \( x \), their corresponding coefficients must be equal.
+
+\[
+\frac{ax + b}{3} = \frac{6}{17}x - \frac{13}{12}
+\]
+
+Step 1: Match coefficients of \( x \):
+
+\[
+\frac{a}{3} = \frac{6}{17} \Rightarrow a = \frac{18}{17}
+\]
+
+Step 2: Match constants:
+
+\[
+\frac{b}{3} = -\frac{13}{12} \Rightarrow b = -\frac{13}{4}
+\]
+
+\textbf{Correct Answer: C.} \( \boxed{-\frac{13}{4}} \)
+
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question: Parabola and Intercepts}}
+
+In the \( xy \)-plane, a parabola has \( x \)-intercepts at \( (-17, 0) \) and \( (37, 0) \).
+
+If the equation of the parabola is written as
+\[
+y = ax^2 + bx + c,
+\]
+where \( a, b, c \) are constants, which of the following expressions gives \( c \) in terms of \( a \)?
+
+\textbf{Choices:}
+\begin{itemize}
+    \item[A.] \( c = -1080a \)
+    \item[B.] \( c = -629a \)
+    \item[C.] \( c = \dfrac{a}{34} \)
+    \item[D.] \( c = 51a \)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer Explanation: Parabola and Intercepts}}
+
+\textbf{Solution:}
+
+Given that the parabola has \( x \)-intercepts at \( -17 \) and \( 37 \), we can write the equation in factored form:
+\[
+y = a(x + 17)(x - 37)
+\]
+
+Expand the expression:
+\[
+y = a(x^2 - 20x - 629)
+\]
+
+Now match the standard form \( y = ax^2 + bx + c \). We identify:
+\[
+c = -629a
+\]
+
+\textbf{Correct Answer: B.} \( \boxed{c = -629a} \)
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Finding the Ratio of Triangle Segment Lengths}}
+
+In triangle \( ABC \), the measure of angle \( B \) is \( 90^\circ \) and \( BD \) is an altitude of the triangle.  
+The length of \( AB = 15 \), and the length of \( AC \) is 23 greater than the length of \( AB \).  
+
+\medskip
+
+What is the value of \( \dfrac{BC}{BD} \)?
+
+\begin{itemize}
+    \item[A.] \( \dfrac{15}{38} \)
+    \item[B.] \( \dfrac{15}{23} \)
+    \item[C.] \( \dfrac{23}{15} \)
+    \item[D.] \( \dfrac{38}{15} \)
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Answer Explanation: Using Right Triangle Properties}}
+\small
+
+\textbf{Step-by-step:}
+
+\begin{itemize}
+    \item \( AB = 15 \), \( AC = AB + 23 = 38 \)
+    \item Use the Pythagorean Theorem to find \( BC \):
+    \[
+    AB^2 + BC^2 = AC^2 \Rightarrow 15^2 + BC^2 = 38^2
+    \]
+    \[
+    225 + BC^2 = 1444 \Rightarrow BC^2 = 1219 \Rightarrow BC = \sqrt{1219}
+    \]
+    \item Area using base and height:
+    \[
+    \text{Area} = \frac{1}{2} \cdot AB \cdot BC = \frac{1}{2} \cdot AC \cdot BD
+    \Rightarrow 15 \cdot BC = 38 \cdot BD
+    \Rightarrow \frac{BC}{BD} = \frac{38}{15}
+    \]
+
+    \item \textbf{Correct Answer:} \( \boxed{\dfrac{38}{15}} \)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Investment Account Model}}
+\footnotesize
+
+A certain investment account offers a special interest rate for the first 4 months the account is open followed by a lower interest rate for the remainder of the time the account is open.  
+
+Akeyla opened one of these accounts with an original account balance of \$700.00 and did not make any other deposits or withdrawals.  
+\begin{itemize}
+    \item 4 months after Akeyla opened the account, the balance had increased by 0.6\% of the original balance.  
+    \item 6 months after opening, the balance had increased by an additional 0.1\% of the balance at the end of the first 4 months.  
+    \item Every 2 months after the first 6 months, the balance increased by an additional 0.1\% of the balance 2 months before.
+\end{itemize}
+
+Which of the following equations could represent the account balance \( B(x) \), in dollars, \( x \) months after the account was opened, where \( x \geq 4 \)?
+
+\begin{itemize}
+    \item[A.] \( B(x) = 704.20(1.001)^{\frac{x-4}{2}} \)
+    \item[B.] \( B(x) = 700.00(1.001)^{\frac{x-4}{2}} \)
+    \item[C.] \( B(x) = 704.20(1.001)^{2(x-4)} \)
+    \item[D.] \( B(x) = 700.00(1.001)^{2(x-4)} \)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer Explanation: Investment Growth Equation}}
+
+\textbf{Solution:}
+\begin{itemize}
+    \item Initial balance: \$700.00
+    \item After 4 months, increased by 0.6\%: 
+    \[
+    700 + 0.006 \cdot 700 = 700 + 4.20 = 704.20
+    \]
+    \item From that point on, the account grows by 0.1\% every 2 months. So:
+    \[
+    \text{Multiplier every 2 months} = 1.001
+    \]
+    \item Since the growth starts from month 4, the number of 2-month periods since month 4 is:
+    \[
+    \frac{x - 4}{2}
+    \]
+    \item Thus, the model is:
+    \[
+    B(x) = 704.20(1.001)^{\frac{x-4}{2}}
+    \]
+\end{itemize}
+
+\textbf{Correct Answer:} \( \boxed{\text{A}} \)
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Unit Conversion – Area Growth Rate}}
+
+The area of a rectangular region is increasing at a rate of 180 square centimeters per hour.  
+
+What is this rate, in square meters per minute?
+
+\begin{itemize}
+    \item[A.] 3
+    \item[B.] 0.3
+    \item[C.] 0.03
+    \item[D.] 0.0003
+\end{itemize}
+
+\end{frame}
+\begin{frame}{\textbf{Answer Explanation: Unit Conversion – Area Growth Rate}}
+
+\textbf{Step-by-step solution:}
+
+\begin{itemize}
+    \item We are given a rate of \( 180 \ \text{cm}^2/\text{hour} \).
+    \item First, convert square centimeters to square meters:
+    \[
+    1 \ \text{m}^2 = 10{,}000 \ \text{cm}^2 \quad \Rightarrow \quad \frac{180}{10{,}000} = 0.018 \ \text{m}^2/\text{hour}
+    \]
+    \item Then, convert hours to minutes:
+    \[
+    \frac{0.018}{60} = 0.0003 \ \text{m}^2/\text{min}
+    \]
+\end{itemize}
+
+\textbf{Correct Answer:} \( \boxed{\text{D}} \)
+
+\end{frame}
+
+\begin{frame}{\textbf{Question: Exponential Function Evaluation}\textbf{Have soem Problems
+}}
+
+The exponential function \( f(x) \) is defined by 
+\[
+f(x) = ab^x
+\]
+where \( a \) and \( b \) are positive constants.  
+
+If 
+\textbf{Given:}
+\[
+f(n - 1) = f(n) + \frac{82}{100} f(n - 1)
+\]  
+where \( n \) is a constant, what is the value of \( b \)?
+
+\begin{itemize}
+    \item[A.] 1
+    \item[B.] 0.82
+    \item[C.] 0.18
+    \item[D.] 10
+\end{itemize}
+
+\end{frame}
+\begin{frame}
+
+\textbf{Solve for } \( b \):
+\[
+b =\Rightarrow b = 0.18
+\]
+
+\textbf{Correct Answer:} \( \boxed{\text{C}} \)
+
+\end{frame}
+
+\begin{frame}{\textbf{Question: Exponential Function and Growth Rate}}
+
+The function \( f \) is defined by the given equation, where \( k \) is a constant.  
+The value of \( f(x) \) increases by 83\% for every increase of \( x \) by 1.
+
+\[
+f(x) = k(1.83)^x
+\]
+
+For which of the following functions, where \( k \) is a constant, does the value of \( g(z) \) increase by 83\% for every increase of \( x \) by \( \frac{1}{4} \)?
+
+\begin{itemize}
+    \item[A.] \( g(z) = k(1.83^{x})^{\frac{1}{4}} \)
+    \item[B.] \( g(z) = k(1.83)^{x+\frac{1}{4}} \)
+    \item[C.] \( g(z) = k(1.83^x)^4 \)
+    \item[D.] \( g(z) = k(1.83)^{x - 4} \)
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{\textbf{Question: Surface Area of Square Pyramids}}
+A right square pyramid has a height of 11 centimeters (cm). A second right square pyramid has a height of 22 centimeters. The area of the bases of each of the two pyramids is 100 cm\(^2\).  
+\vspace{0.3cm}
+
+Which of the following is closest to the difference in the surface area of the second pyramid and the surface area of the first pyramid, in cm\(^2\)?
+
+\begin{itemize}
+    \item[(A)] 209
+    \item[(B)] 220
+    \item[(C)] 367
+    \item[(D)] 551
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation:  (Part 1)}}
+\textbf{Step 1:} Surface area of a square pyramid is given by:  
+\[
+\text{Surface Area} = \text{Base Area} + \text{Lateral Area}
+\]  
+The lateral area for a square pyramid is:  
+\[
+\text{Lateral Area} = 2s \cdot l
+\]  
+where \(s\) is the side of the square base and \(l\) is the slant height.
+
+\pause
+
+\textbf{Step 2:} Base area is 100 cm\(^2\), so  
+\[
+s = \sqrt{100} = 10
+\]
+
+\textbf{Step 3:} Use Pythagoras’ theorem to find the slant height:
+\[
+l = \sqrt{\left(\frac{10}{2}\right)^2 + h^2} = \sqrt{25 + h^2}
+\]
+
+\textbf{First pyramid (\(h = 11\)):}  
+\[
+l_1 = \sqrt{25 + 121} = \sqrt{146}
+\]
+
+\textbf{Second pyramid (\(h = 22\)):}  
+\[
+l_2 = \sqrt{25 + 484} = \sqrt{509}
+\]
+\end{frame}
+
+\begin{frame}{\textbf{Answer Explanation: Surface Area of Square Pyramids (Part 2)}}
+\textbf{Step 4:} Calculate lateral areas:
+
+\[
+L_1 = 2 \cdot 10 \cdot \sqrt{146} \approx 20 \cdot 12.08 = 241.6
+\]
+\[
+L_2 = 2 \cdot 10 \cdot \sqrt{509} \approx 20 \cdot 22.56 = 451.2
+\]
+
+\pause
+
+\textbf{Step 5:} Add base areas:
+
+\[
+\text{Total Surface Area}_1 = 100 + 241.6 = 341.6
+\]
+\[
+\text{Total Surface Area}_2 = 100 + 451.2 = 551.2
+\]
+
+\textbf{Step 6:} Find the difference:
+
+\[
+\Delta \text{Area} = 551.2 - 341.6 = 209.6 \approx \boxed{209}
+\]
+
+\textbf{Final Answer:} \textbf{(A) 209}
+\end{frame}
+
+
+
+
+
+\end{document}

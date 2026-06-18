@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\everymath{\displaystyle}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[margin=1in]{geometry}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\pagestyle{empty}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{tcolorbox}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\markforreview}{
+  \begin{tikzpicture}[scale=1.1]  % 放大整体比例
+    % 黑底白字题号框
+    \fill[black] (0,0) rectangle (0.8,0.6);
+    \node[white, font=\bfseries\large] at (0.4,0.3) {1};
+
+    % 灰色背景栏（整体拉长一点）
+    \fill[gray!10] (0.8,0) rectangle (14.5,0.6);
+    
+    % 书签图标 + Mark for Review
+    \node[anchor=west, font=\small] at (1.2,0.3) {\ding{72} \hspace{1pt}Mark for Review};
+
+    % ABC 按钮（模拟右侧图标）
+    \draw[thick, rounded corners=2pt] (13.6,0.15) rectangle (14.2,0.45);
+    \node[font=\bfseries\footnotesize] at (13.9,0.3) {ABC};
+  \end{tikzpicture}
+}
+
+
+\newcommand{\choicebox}[2]{%
+  \begin{tcolorbox}[colback=white, colframe=gray!60, boxrule=0.4pt, rounded corners=3pt, left=5pt, right=5pt, top=5pt, bottom=5pt]
+    \textbf{#1.} \ #2
+  \end{tcolorbox}
+}
+
+\begin{document}
+
+\markforreview
+
+\vspace{1em}
+
+\begin{center}
+\includegraphics[width=0.45\textwidth]{graph-placeholder.png} % Your graph image here
+\end{center}
+
+\vspace{0.75em}
+
+\noindent
+The graph shows the height above ground, in meters, of a ball \( x \) seconds after the ball was launched upward from a platform. Which statement is the best interpretation of the marked point (1.0, 4.8) in this context?
+
+\vspace{0.75em}
+
+\choicebox{A}{1.0 second after being launched, the ball's height above ground is 4.8 meters.}
+
+\choicebox{B}{4.8 seconds after being launched, the ball's height above ground is 1.0 meter.}
+
+\choicebox{C}{The ball was launched from an initial height of 1.0 meter with an initial velocity of 4.8 meters per second.}
+
+\choicebox{D}{The ball was launched from an initial height of 4.8 meters with an initial velocity of 1.0 meter per second.}
+
+\end{document}

@@ -1,0 +1,219 @@
+\documentclass[12pt]{article}
+\everymath{\displaystyle}
+\usepackage{unicode-math}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{amsmath}
+
+
+
+\usepackage[margin=1in]{geometry}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{pifont}
+\usepackage{xcolor}
+\newcounter{questionnum}
+\setcounter{questionnum}{0}
+\usepackage{eso-pic} % for page background
+
+% --------- 主题颜色设置 ---------
+\definecolor{novelblue}{RGB}{70,60,150}
+\definecolor{headerbg}{RGB}{240,240,255}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{novelblue}\leaders\hrule height 0.4pt\hfill}}
+
+% --------- 页眉背景色条 ---------
+\newcommand{\headbackground}{
+  \AddToShipoutPictureBG*{
+    \begin{tikzpicture}[remember picture, overlay]
+      \fill[blue!5!purple!10] (current page.north west) rectangle ([yshift=-60pt]current page.north east);
+    \end{tikzpicture}
+  }
+}
+
+% --------- 页眉设置 ---------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\color{novelblue}\textbf{\textbf{Novel Prep} }}
+\fancyhead[C]{\color{novelblue}\textbf {SAT Preparation}}
+\fancyhead[R]{\color{novelblue}\textbf{Jack Zeng}}
+
+
+\newtcolorbox{SATCard}[1][]{%
+  enhanced,
+  colback=white,
+  colframe=novelblue,
+  coltitle=white,
+  boxrule=0.6pt,
+  arc=4pt,
+  boxsep=5pt,
+  left=8pt, right=8pt, top=10pt, bottom=10pt,
+  sharp corners=south,
+  drop shadow south east,
+  #1
+}
+
+% --------- 顶部 Mark for Review 栏 ---------
+\newcommand{\markforreview}{
+  \stepcounter{questionnum} % 自动递增题号
+  \begin{tikzpicture}[scale=1.1]
+    % 黑色题号
+    \fill[black] (0,0) rectangle (0.8,0.6);
+    \node[white, font=\bfseries\large] at (0.4,0.3) {\thequestionnum};
+
+    % 灰底主栏
+    \fill[gray!10] (0.8,0) rectangle (14.5,0.6);
+
+    % Mark for Review
+    \node[anchor=west, font=\small] at (1.2,0.3) {\ding{72} \hspace{2pt}Mark for Review};
+
+    % ABC 按钮区域
+    \draw[thick, rounded corners=3pt] (13.5,0.12) rectangle (14.5,0.48);
+    \node[font=\bfseries\normalsize] at (14.0,0.3) {ABC};
+  \end{tikzpicture}
+
+
+  \newcommand{\choiceboxcircled}[2]{%
+  \begin{tcolorbox}[
+    colback=white,
+    colframe=black,
+    boxrule=0.5pt,
+    rounded corners=6pt,
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    width=\linewidth
+  ]
+    \textbf{\large\textcircled{\textbf{#1}}} \ #2
+  \end{tcolorbox}
+}
+}
+
+% --------- 选项框样式 ---------
+\newcommand{\choicebox}[2]{%
+  \begin{tcolorbox}[
+    colback=white, 
+    colframe=novelblue,
+    boxrule=0.5pt, 
+    rounded corners=4pt, 
+    left=6pt, right=6pt, top=6pt, bottom=6pt,
+    width=\linewidth
+  ]
+  \textbf{#1.} \ #2
+  \end{tcolorbox}
+}
+
+
+
+\begin{document}
+\section*{SAT Hard Question 17}
+
+
+\noindent\markforreview
+\vspace{1em}
+
+For the function $f$, for each increase in the value of $x$ by $c$, where $c$ is a positive constant, the value of $f(x)$ increases by a factor of $27$. Which of the following equivalent forms of the function $f$ displays $\frac{1}{c}$ as a coefficient of $x$?
+
+\begin{enumerate}[label=(\Alph*)]
+\item $f(x) = 54(3)^{\frac{1}{3}x}$
+\item $f(x) = 54(3^3)^{\frac{1}{6}x}$
+\item $f(x) = 54(9)^{\frac{1}{4}x}$
+\item $f(x) = 54\left(27^{\frac{1}{3}x} \right)^{\frac{1}{2}}$
+\end{enumerate}
+
+
+
+\vspace{2em}
+\noindent\markforreview
+\vspace{1em}
+
+The composition of an animal is defined as the muscles, bones, and fat of the animal. A scientist studied the composition of one young swamp buffalo and determined the buffalo had $133$ kilograms of muscle, which made up approximately $65.9\%$ of its composition. Of the remaining composition of this buffalo, approximately $46.2\%$ was bone, and the remainder was fat. Based on these approximations, to the nearest tenth, how many kilograms of this buffalo's composition was bone?
+\newpage
+\vspace{2em}
+\noindent\markforreview
+
+
+\[f(x) = 3(x-a)(x-b)(x-c)\]
+
+
+The function $f$ is defined by the given equation, where $a$, $b$, and $c$ are distinct constants. When $a < x < b$, the value of $f(x)$ is positive. The graph of $y = f(x)$ in the $xy$-plane contains the point $(r, s)$, where $r$ and $s$ are constants. If $s = 8$, which of the following could be true?
+
+\begin{itemize}
+\item[I.] $r < a$
+\item[II.] $b < r < c$
+\item[III.] $r > c$
+\end{itemize}
+
+\begin{enumerate}[label=(\Alph*)]
+\item I only
+\item III only
+\item I and III only
+\item II and III only
+\end{enumerate}
+
+
+\vspace{2em}
+\noindent\markforreview
+\vspace{1em}
+
+In isosceles triangle $ABC$, sides $AB$ and $AC$ are congruent. Point $D$ divides side $BC$ such that the length of $\overline{BD}$ is $\dfrac{4}{7}$ of the length of $\overline{BC}$. Point $E$ lies on side $AB$ and point $F$ lies on side $AC$ such that when segments $\overline{DE}$ and $\overline{DF}$ are drawn, angle $\angle BED$ is congruent to angle $\angle CFD$. If the length of $\overline{BE}$ is $8$, what is the length of $\overline{CF}$?
+
+\begin{itemize}
+  \item[(A)] 6
+  \item[(B)] 14
+  \item[(C)] 32
+  \item[(D)] 56
+\end{itemize}
+
+\newpage
+\vspace{2em}
+\noindent\markforreview
+\vspace{1em}
+
+The function $f$ is defined by the given equation: 
+\[
+f(x) = x^2 - 4x - 320
+\]
+Which of the following equivalent forms of the equation displays the minimum value of the function as a constant or coefficient?
+
+\begin{itemize}
+  \item[(A)] $f(x) = x^2 - 4(x + 80)$
+  \item[(B)] $f(x) = (x - 2)^2 + (-324)$
+  \item[(C)] $f(x) = x(x - 4) + (-320)$
+  \item[(D)] $f(x) = (x + 16)(x - 20)$
+\end{itemize}
+
+
+
+\vspace{2em}
+\noindent\markforreview
+\vspace{1em}
+
+In the given equation, $s$ and $r$ are constants, and $s > 0$. If the equation has infinitely many solutions, what is the value of $s$?
+\[
+\frac{12x + 28}{4} - \frac{s}{13} = r(x - 8)
+\]
+\vspace{2em}
+
+
+\vspace{2em}
+\noindent\markforreview
+\vspace{1em}
+
+A right triangular pyramid has exactly six edges. Each of these edges is $96$ centimeters long. If the surface area of the pyramid is $k\sqrt{3}$ square centimeters, what is the value of $k$?
+\vspace{2em}
+
+
+
+
+
+
+
+\end{document}

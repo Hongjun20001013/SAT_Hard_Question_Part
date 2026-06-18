@@ -1,0 +1,176 @@
+
+
+\documentclass[12pt]{article}
+\usepackage{xcolor}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage[most]{tcolorbox}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Custom colors
+\definecolor{questioncolor}{HTML}{2B3990}
+\definecolor{answercolor}{HTML}{DB4437}
+\definecolor{boxcolor}{HTML}{F4B400}
+
+\newtcolorbox{questionbox}{colback=blue!5!white, colframe=questioncolor, coltitle=black, fonttitle=\bfseries, title=\textcolor{questioncolor}{\textbf{Question}}}
+\newtcolorbox{answerbox}{colback=red!5!white, colframe=answercolor, coltitle=black, fonttitle=\bfseries, title=\textcolor{answercolor}{\textbf{Answer}}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+\begin{document}
+
+\section*{Math Hard Question 3}
+
+
+
+% --- QUESTION 1 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+A research manager selected 2 random samples of ovens of a certain type to estimate the average amount of time this type of oven takes to preheat to $325^\circ F$. The research manager recorded the amount of time, in minutes, each oven takes to preheat to $325^\circ F$.
+
+Based on the first sample, the manager estimated an average of 14.2 minutes, with a margin of error of 1 minute. Based on the second sample, the estimate was 14.4 minutes, with a margin of error of 2.3 minutes.
+
+Assuming the margins of error were calculated the same way, which of the following best explains why the first sample had a smaller margin of error?
+
+\begin{enumerate}
+    \item[A.] The first sample contained fewer ovens than the second sample.
+    \item[B.] The first sample contained more ovens than the second sample.
+    \item[C.] The first sample took less time on average to preheat.
+    \item[D.] The first sample took more time on average to preheat.
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+The margin of error decreases as the sample size increases (assuming variability is similar). Since the first sample has a smaller margin of error, it likely had a larger sample size.
+
+\textbf{Correct answer: B. The first sample contained more ovens than the second sample.}
+\end{tcolorbox}
+
+% --- QUESTION 2 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+In triangle $XYZ$, $\angle X = 54^\circ$, $XY = 26$ units, $XZ = 19$ units.
+
+What is the area, in square units, of triangle $XYZ$?
+
+\begin{enumerate}
+    \item[A.] 247
+    \item[B.] 494
+    \item[C.] $247 \sin 54^\circ$
+    \item[D.] $494 \sin 54^\circ$
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+Use the formula:
+\[
+\text{Area} = \frac{1}{2} ab \sin C = \frac{1}{2} \cdot 26 \cdot 19 \cdot \sin(54^\circ) = 247 \sin(54^\circ)
+\]
+
+\textbf{Correct answer: C. $247 \sin 54^\circ$}
+\end{tcolorbox}
+
+% --- QUESTION 3 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+A circle with center $O$ has radius $10$. Point $A$ lies on the circle, and chord $AB$ subtends an angle of $120^\circ$ at the center. A point $P$ lies on the arc $AB$, and $PA$ is extended to meet the tangent to the circle at $B$ at point $T$. If $BT = x$, find the exact value of $x$.
+
+\begin{itemize}
+    \item A. $10\sqrt{3}$
+    \item B. $15$
+    \item C. $10$
+    \item D. $20$
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+\[
+AB = 2r \sin\left(\frac{120^\circ}{2}\right) = 2 \cdot 10 \cdot \sin(60^\circ) = 10\sqrt{3}
+\]
+\[
+BT^2 = OT^2 - OB^2 = 20^2 - 10^2 = 300 \Rightarrow BT = \sqrt{300} = 10\sqrt{3}
+\]
+
+\textbf{Correct answer: A. $10\sqrt{3}$}
+\end{tcolorbox}
+
+% --- QUESTION 4 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+In the figure, $\triangle ABC$ is inscribed in a semicircle with diameter $AC = 10$. Point $B$ lies on the semicircle. If $AB = 6$ and $BC = x$, find $x$. Give your answer in simplest radical form.
+
+\begin{itemize}
+    \item A. $\sqrt{36}$
+    \item B. $8$
+    \item C. $\sqrt{44}$
+    \item D. $\sqrt{64}$
+\end{itemize}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+By Thales' theorem, $\angle B = 90^\circ$. Using the Pythagorean theorem:
+\[
+6^2 + x^2 = 10^2 \Rightarrow 36 + x^2 = 100 \Rightarrow x^2 = 64 \Rightarrow x = 8
+\]
+
+\textbf{Correct answer: B. $8$}
+\end{tcolorbox}
+
+% --- QUESTION 5 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+A parabola is given by 
+\[
+y = x^2 - 4x + 5,
+\]
+and a circle by 
+\[
+x^2 + y^2 = 25.
+\]
+The parabola and circle intersect at points $P$ and $Q$. Find the distance between $P$ and $Q$.
+
+\textbf{Options:}
+\begin{enumerate}
+    \item[A.] $2\sqrt{2}$
+    \item[B.] $4$
+    \item[C.] $6$
+    \item[D.] $2\sqrt{5}$
+\end{enumerate}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+Substitute $y = x^2 - 4x + 5$ into the circle's equation:
+\[
+x^2 + (x^2 - 4x + 5)^2 = 25
+\]
+Solving yields two intersection points. Using distance formula:
+\[
+\text{Distance} = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} = 2\sqrt{5}
+\]
+
+\textbf{Correct answer: D. $2\sqrt{5}$}
+\end{tcolorbox}
+
+% --- QUESTION 6 ---
+\begin{tcolorbox}[colback=blue!5!white, colframe=blue!75!black, title=Question]
+Solve the equation:
+\[
+\sqrt{6r} = \sqrt{r^2 - 16}
+\]
+What is the product of all solutions to the above equation?
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=green!10, colframe=green!50!black, title=Answer]
+Square both sides:
+\[
+6r = r^2 - 16 \Rightarrow r^2 - 6r - 16 = 0
+\]
+Solve:
+\[
+r = \frac{6 \pm \sqrt{100}}{2} = \frac{6 \pm 10}{2} \Rightarrow r = 8 \text{ or } -2
+\]
+Check:
+\[
+r = -2 \Rightarrow \sqrt{-12} \text{ is not real}
+\Rightarrow \text{Valid solution: } r = 8
+\]
+
+\textbf{Product of all valid solutions: } $\boxed{8}$
+\end{tcolorbox}
+
+\end{document}

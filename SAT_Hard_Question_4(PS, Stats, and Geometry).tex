@@ -1,0 +1,364 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% 自定义颜色
+\definecolor{purpleblue}{RGB}{80, 80, 180}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+\definecolor{novelPurple}{RGB}{98, 54, 255} 
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% 主题设置
+\usetheme{Madrid}  
+\usecolortheme{dolphin} 
+
+% 设置字体（移除 fontspec，确保 pdfLaTeX 兼容）
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=white, bg=novelPurple}
+\setbeamercolor{title}{fg=white, bg=purpleblue}
+
+% 封面信息
+\title[SAT Hard Question]{\textbf{SAT Hard Question 4}}
+\author{\textbf{Jack Zeng}}
+\institute{\textcolor{white}{\textbf{Novel Prep}}}
+\date{\today} 
+
+\begin{document}
+
+% --- Title Slide ---
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{flushright}
+        \textcolor{purpleblue}{\Huge \textbf{Novel Prep}}
+    \end{flushright}
+\end{frame}
+
+
+\begin{frame}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 设置浅色渐变背景
+        \shade[top color=softPurple, bottom color=softGray] 
+            (current page.north west) rectangle (current page.south east);
+        
+        % 添加高斯模糊光晕
+        \fill[white, opacity=0.3] (current page.center) circle (4cm);
+        
+        % 主标题
+        \node[align=center] at (current page.center) {
+            {\Huge\bfseries\textcolor{purpleblue}{Novel Prep}} \\[0.5cm]
+            {\Large\itshape\textcolor{lightText}{Excellence in SAT Prep}}
+        };
+
+        % 添加柔和光点（点缀）
+        \foreach \x in {1,2,3,4,5} {
+            \fill[purpleblue, opacity=0.2] (rand*10-5, rand*7-3.5) circle (0.1+\x*0.05);
+        }
+
+        ;
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{\textbf{Question 1: Probability (Statistics)}}
+\small
+The incomplete table below summarizes the number of left-handed and right-handed students by gender for eighth-grade students at Keisel Middle School.
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Gender} & \textbf{Left} & \textbf{Right} \\
+\hline
+Female &  &  \\
+\hline
+Male &  &  \\
+\hline
+Total & 18 & 122 \\
+\hline
+\end{tabular}
+\end{center}
+
+There are \textbf{5 times} as many right-handed female students as left-handed female students, and \textbf{9 times} as many right-handed male students as left-handed male students.
+
+If there are a total of 18 left-handed and 122 right-handed students, which of the following is closest to the probability that a randomly selected right-handed student is female?
+
+\begin{itemize}
+    \item[A.] \( 0.410 \)
+    \item[B.] \( 0.357 \)
+    \item[C.] \( 0.333 \)
+    \item[D.] \( 0.250 \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer to Question 1}}
+Let \( x \) be the number of left-handed females and \( y \) be the number of left-handed males.
+
+\begin{itemize}
+    \item Total left-handed: \( x + y = 18 \)
+    \item Right-handed females: \( 5x \), right-handed males: \( 9y \)
+    \item Total right-handed: \( 5x + 9y = 122 \)
+\end{itemize}
+
+Now solve the system:
+\[
+\begin{aligned}
+x + y &= 18 \\
+5x + 9y &= 122
+\end{aligned}
+\]
+
+Substitute \( y = 18 - x \) into the second equation:
+\[
+5x + 9(18 - x) = 122 \Rightarrow 5x + 162 - 9x = 122 \Rightarrow -4x = -40 \Rightarrow x = 10
+\]
+\[
+\Rightarrow y = 8, \quad \text{Right-handed females} = 50, \quad \text{Right-handed students} = 122
+\]
+
+\[
+\text{Probability} = \frac{50}{122} \approx 0.41
+\]
+
+\textbf{Correct Answer: A. \( 0.410 \)}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question 2: Little's Law}}
+If shoppers enter a store at an average rate of \( r \) shoppers per minute and each stays in the store for an average of \( T \) minutes, the average number of shoppers in the store is \( N = rT \).
+
+In the original store:
+\[
+r = 3 \text{ shoppers/minute}, \quad T = 15 \Rightarrow N = 45
+\]
+
+In the new store:
+\[
+r = \frac{90}{60} = 1.5, \quad T = 12 \Rightarrow N = 1.5 \times 12 = 18
+\]
+
+What percent less is the new store’s average number of shoppers compared to the original?
+
+\begin{itemize}
+    \item[A.] \( 57 \)
+    \item[B.] \( 58 \)
+    \item[C.] \( 59 \)
+    \item[D.] \( 60 \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer to Question 2}}
+From Little's Law:
+\[
+\text{Original store: } N = 3 \times 15 = 45
+\]
+\[
+\text{New store: } r = \frac{90}{60} = 1.5,\quad T = 12,\quad N = 1.5 \times 12 = 18
+\]
+
+\[
+\text{Percent decrease} = \frac{45 - 18}{45} \times 100 = \frac{27}{45} \times 100 = 60\%
+\]
+
+\textbf{Correct Answer: D. \( 60 \)}
+\end{frame}
+
+\begin{frame}{\textbf{Question 3: Statistical Generalization}}
+\small
+A trivia tournament organizer wanted to study the relationship between the number of points a team scores in a trivia round and the number of hours that a team practices each week.
+
+For the study, the organizer selected \textbf{55} teams at random from all trivia teams in a certain tournament. The table displays the information for the \textbf{40} teams in the sample that practiced for at least \textbf{3 hours per week.}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Hours practiced} & \textbf{6 to 13 points} & \textbf{14 or more points} & \textbf{Total} \\
+\hline
+\textbf{3 to 5 hours} & 6 & 4 & 10 \\
+\textbf{More than 5 hours} & 4 & 26 & 30 \\
+\hline
+\textbf{Total} & 10 & 30 & 40 \\
+\hline
+\end{tabular}
+\end{center}
+
+Which of the following is the \textbf{largest population} to which the results of the study can be generalized?
+
+\begin{itemize}
+    \item[A.] All trivia teams in the tournament that scored \textbf{14 or more points}.
+    \item[B.] The \textbf{55 trivia teams} in the sample.
+    \item[C.] The \textbf{40 trivia teams} in the sample that practiced for at least \textbf{3 hours per week}.
+    \item[D.] All trivia teams in the \textbf{tournament}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer to Question 3}}
+
+
+\textbf{Correct Answer: D. }
+\end{frame}
+
+\begin{frame}{\textbf{Question 4: Tangent Line and Circle Geometry}}
+\textbf{Given:} The circle has center \( (-1, 1) \). Line \( t \) is tangent to this circle at point \( (4, -3) \).
+
+Which of the following points lies on line \( t \)?
+
+\begin{itemize}
+    \item[A.] \( (0, \frac{5}{4}) \)
+    \item[B.] \( (3,6) \)
+    \item[C.] \( (8,2) \)
+    \item[D.] \( (9,1) \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer to Question 4}}
+To find the tangent line to a circle at a point, find the radius vector from the center to the point of tangency:
+\[
+\vec{r} = \langle 4 - (-1), -3 - 1 \rangle = \langle 5, -4 \rangle
+\]
+The slope of the radius is \( \frac{-4}{5} \), so the slope of the tangent line is the negative reciprocal: \( \frac{5}{4} \).
+
+Using point-slope form:
+\[
+y + 3 = \frac{5}{4}(x - 4)
+\]
+
+Now test which point lies on this line. Try \( (8, 2) \):
+\[
+2 + 3 = \frac{5}{4}(8 - 4) \Rightarrow 5 = \frac{5}{4} \cdot 4 = 5
+\]
+
+\textbf{Correct Answer: C. \( (8,2) \)}
+\end{frame}
+
+\begin{frame}{\textbf{Question 5: Rectangular Prism Surface Area}}
+Two identical rectangular prisms each have a height of \textbf{90 cm}. The base of each prism is a square, and the surface area of each prism is \( K \) cm\(^2\).
+
+When the prisms are glued together along one square base, the new surface area is:
+\[
+\frac{92}{47} K \text{ cm}^2.
+\]
+
+What is the side length, in cm, of each square base?
+
+\begin{itemize}
+    \item[A.] \( s = 4 \)
+    \item[B.] \( s = 6 \)
+    \item[C.] \( s = 8 \)
+    \item[D.] \( s = 10 \)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer to Question 5}}
+Let the side length be \( s \). For a rectangular prism with square base:
+\[
+\text{Surface Area} = 2s^2 + 4sh
+\]
+
+Each original prism has:
+\[
+K = 2s^2 + 4s(90) = 2s^2 + 360s
+\]
+
+When glued together along one square base, one face is removed:
+\[
+\text{New surface area} = 2K - 2s^2 = 2(2s^2 + 360s) - 2s^2 = 2s^2 + 720s
+\]
+
+Given:
+\[
+2s^2 + 720s = \frac{92}{47}(2s^2 + 360s)
+\]
+
+Solve for \( s \), and you’ll find \( s = 8 \)
+
+\textbf{Correct Answer: C. \( s = 8 \)}
+\end{frame}
+
+
+
+
+
+
+\begin{frame}{\textbf{Question 6: Triangle Similarity and Area}}
+In triangle \( RST \), angle \( T \) is a right angle. Point \( L \) lies on \( \overline{RS} \), point \( K \) lies on \( \overline{ST} \), and \( \overline{LK} \) is parallel to \( \overline{RT} \).
+
+\textbf{Given:}
+\begin{itemize}
+    \item \( RT = 72 \) units,
+    \item \( LK = 24 \) units,
+    \item Area of \( \triangle RST = 792 \) square units.
+\end{itemize}
+
+Find the length of \( KT \), in units.
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer to Question 6}}
+Since \( LK \parallel RT \), triangle \( \triangle LKT \sim \triangle RST \) by AA similarity.
+
+\[
+\frac{LK}{RT} = \frac{24}{72} = \frac{1}{3}
+\]
+
+Because area scales by the square of the side ratio:
+\[
+\text{Area of } \triangle LKT = \left( \frac{1}{3} \right)^2 \cdot 792 = \frac{1}{9} \cdot 792 = 88
+\]
+
+Now use triangle area formula:
+\[
+\text{Area} = \frac{1}{2} \cdot LK \cdot KT = 88
+\Rightarrow \frac{1}{2} \cdot 24 \cdot KT = 88
+\Rightarrow 12 \cdot KT = 88
+\Rightarrow KT = \frac{88}{12} = \frac{22}{3}
+\]
+
+\textbf{Correct Answer: \( \boxed{\frac{22}{3}} \) units}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question 7: Circle Equation (Geometry)}}
+Given the circle equation:
+\[
+(x - 6)^2 + (y + 5)^2 = 16
+\]
+
+Point \( P(10, -5) \) lies on the circle, and segment \( PQ \) is the diameter.
+
+\begin{itemize}
+    \item What are the coordinates of point \( Q \)?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer to Question 7}}
+\begin{itemize}
+    \item The center of the circle is the midpoint of diameter \( PQ \), and is given as:
+    \[
+    (6, -5)
+    \]
+    
+    \item Let point \( Q = (x, y) \), and recall that the midpoint of \( PQ \) is:
+    \[
+    \left( \frac{10 + x}{2}, \frac{-5 + y}{2} \right) = (6, -5)
+    \]
+    
+    \item Solve for \( x \) and \( y \):
+    \[
+    \frac{10 + x}{2} = 6 \Rightarrow 10 + x = 12 \Rightarrow x = 2
+    \]
+    \[
+    \frac{-5 + y}{2} = -5 \Rightarrow -5 + y = -10 \Rightarrow y = -5
+    \]
+\end{itemize}
+
+\textbf{Coordinates of point \( Q \):} \( \boxed{(2, -5)} \)
+\end{frame}
+
+
+
+
+\end{document}

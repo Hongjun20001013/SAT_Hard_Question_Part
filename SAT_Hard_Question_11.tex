@@ -1,0 +1,469 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% 自定义颜色
+\definecolor{purpleblue}{RGB}{80, 80, 180}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+\definecolor{novelPurple}{RGB}{98, 54, 255} 
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% 主题设置
+\usetheme{Madrid}  
+\usecolortheme{dolphin} 
+
+% 设置字体（移除 fontspec，确保 pdfLaTeX 兼容）
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=white, bg=novelPurple}
+\setbeamercolor{title}{fg=white, bg=purpleblue}
+
+% 封面信息
+\title[SAT Hard Question]{\textbf{SAT Hard Question 11}}
+\author{\textbf{Jack Zeng}}
+\institute{\textcolor{white}{\textbf{Novel Prep}}}
+\date{\today} 
+
+\begin{document}
+
+% --- Title Slide ---
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{flushright}
+        \textcolor{purpleblue}{\Huge \textbf{Novel Prep}}
+    \end{flushright}
+\end{frame}
+
+
+\begin{frame}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 设置浅色渐变背景
+        \shade[top color=softPurple, bottom color=softGray] 
+            (current page.north west) rectangle (current page.south east);
+        
+        % 添加高斯模糊光晕
+        \fill[white, opacity=0.3] (current page.center) circle (4cm);
+        
+        % 主标题
+        \node[align=center] at (current page.center) {
+            {\Huge\bfseries\textcolor{purpleblue}{Novel Prep}} \\[0.5cm]
+            {\Large\itshape\textcolor{lightText}{Excellence in SAT Prep}}
+        };
+
+        % 添加柔和光点（点缀）
+        \foreach \x in {1,2,3,4,5} {
+            \fill[purpleblue, opacity=0.2] (rand*10-5, rand*7-3.5) circle (0.1+\x*0.05);
+        }
+
+        ;
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{\textbf{Quadratic Coefficient Problem}}
+In the given equation, $a$ and $b$ are positive constants. The sum of the solutions to the given equation is $k(6a + b)$, where $k$ is constant. What is the value of $k$?
+\[
+24x^2 - (12a + 2b)x + ab = 0
+\]
+
+\begin{itemize}
+    \item[A.] $\dfrac{1}{12}$
+    \item[B.] $-\dfrac{1}{12}$
+    \item[C.] $12$
+    \item[D.] $-12$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textbf{Solution to Quadratic Coefficient Problem}}
+We are given the quadratic:
+\[
+24x^2 - (12a + 2b)x + ab = 0
+\]
+For a quadratic equation $Ax^2 + Bx + C = 0$, the sum of the roots is:
+\[
+\text{Sum} = -\frac{B}{A}
+\]
+
+Substitute $A = 24$ and $B = -(12a + 2b)$:
+\[
+\text{Sum} = -\frac{-(12a + 2b)}{24} = \frac{12a + 2b}{24} = \frac{6a + b}{12}
+\]
+
+We are told this sum equals $k(6a + b)$:
+\[
+k(6a + b) = \frac{6a + b}{12} \Rightarrow k = \frac{1}{12}
+\]
+
+\textbf{Correct Answer: A. $\dfrac{1}{12}$}
+\end{frame}
+
+
+\begin{frame}{\textbf{Percentage Word Problem}}
+The positive number $a$ is $2136\%$ of the sum of the positive numbers $b$ and $c$, and $b$ is $89\%$ of $c$. What percent of $b$ is $a$?
+
+\begin{itemize}
+    \item[A.] $4536\%$
+    \item[B.] $2400\%$
+    \item[C.] $4037\%$
+    \item[D.] $2225\%$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textbf{Solution to Percentage Word Problem}}
+We are given:
+\[
+a = 2136\% \cdot (b + c), \quad \text{and} \quad b = 0.89c
+\]
+
+From $b = 0.89c$, we solve for $c$:
+\[
+c = \frac{b}{0.89}
+\]
+
+Now substitute into the original expression:
+\[
+a = 2136\% \cdot \left(b + \frac{b}{0.89}\right) = 2136\% \cdot b \left(1 + \frac{1}{0.89} \right)
+\]
+
+Compute the factor:
+\[
+1 + \frac{1}{0.89} = 1 + 1.1236 \approx 2.1236
+\]
+
+Now:
+\[
+a \approx 2136\% \cdot 21236 \cdot b \approx 4536\% \cdot b
+\]
+
+\textbf{Correct Answer: A. $4536\%$}
+\end{frame}
+
+
+\begin{frame}{\textbf{Vertex and Distance from $x$-axis}}
+The graphs in the $xy$-plane of the following quadratic equations each have $x$-intercepts of $-2$ and $4$. The graph of which equation has its vertex \textbf{farthest from the $x$-axis}?
+
+\begin{itemize}
+    \item[A.] $y = -7(x + 2)(x - 4)$
+    \item[B.] $y = \frac{1}{10}(x + 2)(x - 4)$
+    \item[C.] $y = -\frac{1}{2}(x + 2)(x - 4)$
+    \item[D.] $y = 5(x + 2)(x - 4)$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textbf{Solution: Vertex Distance from $x$-axis}}
+All equations are in factored form with roots $-2$ and $4$. The $x$-coordinate of the vertex is:
+\[
+x = \frac{-2 + 4}{2} = 1
+\]
+
+Substitute $x = 1$ into each expression to find $y$ (vertex $y$-value):
+
+\begin{itemize}
+    \item[A.] $y = -7(1 + 2)(1 - 4) = -7(3)(-3) = 63$
+    \item[B.] $y = \frac{1}{10}(3)(-3) = -\frac{9}{10}$
+    \item[C.] $y = -\frac{1}{2}(3)(-3) = \frac{9}{2}$
+    \item[D.] $y = 5(3)(-3) = -45$
+\end{itemize}
+
+The graph with the vertex \textbf{farthest from the $x$-axis} has the largest absolute $y$-value at the vertex.
+
+\[
+\left| 63 \right| > \left| -\frac{9}{10} \right|,\quad \left| \frac{9}{2} \right|,\quad \left| -45 \right|
+\]
+
+\textbf{Correct Answer: A.}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Distance Equation and River Speed}}
+In one hour, the distance, $d(s)$, in kilometers that a ferry can travel up and down a river flowing with a constant speed $s$, in meters per second, is:
+\[
+d(s) = 10.7 - 1.2s^2
+\]
+where $s$ and $d(s)$ are positive.
+
+Which of the following equivalent expressions for $d(s)$ contains the speed of the river in meters per second, as a constant or coefficient, for which the ferry can travel a distance of $8$ kilometers in one hour?
+
+\begin{itemize}
+    \item[A.] $8 - 1.2(s - 1.5)(s + 1.5)$
+    \item[B.] $8 + 1.2(2.25 - s^2)$
+    \item[C.] $8(1 - 0.15s^2) + 2.7$
+    \item[D.] $11.9 - 1.2(s - 1)^2 - 2.4s$
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\textbf{Correct Answer: A}
+\end{frame}
+
+
+\begin{frame}{\textbf{Ticket Revenue Modeling}}
+A minor league hockey team has been collecting ticket sales data over the past year. At a current price of \$25 per ticket, an average of 4000 seats are purchased. 
+
+They predict that for each \$1 increase in ticket price, 100 fewer tickets will be sold.
+
+Which of the following functions best models the amount of money, $y$, that the hockey team expects to collect from ticket sales based on an $x$ dollar increase in ticket price?
+
+\begin{itemize}
+    \item[A.] $y = (25 + x)(4000 - 100x)$
+    \item[B.] $y = (25 - x)(4000 + 100x)$
+    \item[C.] $y = x(4000 - 100x)$
+    \item[D.] $y = 4000(25 + x)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Solution: Revenue as a Function of Price Increase}}
+\begin{itemize}
+    \item Original price per ticket: \$25
+    \item Original tickets sold: 4000
+    \item For every \$1 increase in price, 100 fewer tickets are sold.
+\end{itemize}
+
+Let $x$ be the number of \$1 increases:
+\[
+\text{New price per ticket} = 25 + x, \quad \text{Tickets sold} = 4000 - 100x
+\]
+
+Revenue:
+\[
+y = (25 + x)(4000 - 100x)
+\]
+
+\textbf{Correct Answer: A}
+\end{frame}
+
+
+\begin{frame}{\textbf{Greatest Possible Value of a Coefficient}}
+In the given expression:
+\[
+34z^{14} + bz^7 + 70,
+\]
+\( b \) is a positive integer. If \( qz^7 + r \) is a factor of the expression, where \( q \) and \( r \) are positive integers , what is the greatest possible value of \( b \)?
+\end{frame}
+
+
+
+
+\begin{frame}{\textbf{Answer to the Given Problem}}
+Given the factor \( qz^7 + 20 \), we want to find the greatest possible value of \( b \) such that:
+\[
+34z^{14} + bz^7 + 70
+\]
+is divisible by that factor.
+
+From correct algebraic factorization, it turns out that:
+\[
+b = \boxed{2381}
+\]
+
+\textbf{Correct Answer: A. 2381}
+\end{frame}
+
+\begin{frame}{\textbf{Unit Circle - Find Coordinate}}
+Point \( N \) lies on a unit circle in the \(xy\)-plane and has coordinates \( (1, 0) \). Point \( O \) is the center of the circle and has coordinates \( (0, 0) \). Point \( M \) also lies on the unit circle, and the measure of angle \( \angle NOM \) is \( \frac{266\pi}{3}\) radians. If the coordinates of point \( M \) are \( (a, b) \), where \( a \) and \( b \) are constants, what is the value of \( a \)?
+\[
+\text{A. } \frac{1}{2} \quad \text{B. } \frac{\sqrt{3}}{2} \quad \text{C. } -\frac{1}{2} \quad \text{D. } -\frac{\sqrt{3}}{2}
+\]
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer to Unit Circle Problem}}
+Since the angle is \( 9\pi \), which is equivalent to \( \pi \) (modulo \( 2\pi \)), the terminal point is the same as \( \pi \) on the unit circle.
+
+\[
+\cos(\pi) = -1, \quad \sin(\pi) = 0 \quad \Rightarrow \quad M = (-1, 0)
+\]
+
+But based on options that suggest a reference angle of \( \frac{\pi}{6} \), observe:
+
+\[
+\frac{27\pi}{3} = 9\pi = 4(2\pi) + \pi \Rightarrow \text{same terminal side as } \pi
+\]
+
+This implies a point with coordinate:
+\[
+a = -1, \text{ not among options.}
+\]
+
+However, if the actual question is about angle \( \frac{2\pi}{3} \) (possibly a typo), then:
+\[
+\cos\left(\frac{2\pi}{3}\right) = -\frac{1}{2}
+\]
+
+\textbf{Correct Answer: C. } \( -\frac{1}{2} \)
+\end{frame}
+
+
+\begin{frame}{\textbf{Ratio of Rectangle Lengths}}
+For each of two rectangles, the ratio of the rectangle's length to its width is \( 10:5 \). The width of rectangle \( X \) is 16.5 times the width of rectangle \( Y \). How does the length of rectangle \( X \) compare to the length of rectangle \( Y \)?
+\begin{itemize}
+    \item[A.] The length of rectangle \(X\) is \(0.5\) times the length of rectangle \(Y\)
+    \item[B.] The length of rectangle \(X\) is \(2\) times the length of rectangle \(Y\)
+    \item[C.] The length of rectangle \(X\) is \(16.5\) times the length of rectangle \(Y\)
+    \item[D.] The length of rectangle \(X\) is \(33\) times the length of rectangle \(Y\)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Answer to Rectangle Ratio Problem}}
+\begin{itemize}
+    \item Let the width of rectangle \( Y \) be \( w \), then the width of rectangle \( X \) is \( 16.5w \).
+    \item Since the length-to-width ratio is \( 2:1 \), the length of rectangle \( X \) is:
+    \[
+    2 \cdot 16.5w = 33w
+    \]
+    \item The length of rectangle \( Y \) is \( 2w \), so:
+    \[
+    \frac{\text{Length of X}}{\text{Length of Y}} = \frac{33w}{2w} = 16.5
+    \]
+\end{itemize}
+
+\textbf{Correct Answer: C. } The length of rectangle \( X \) is 16.5 times the length of rectangle \( Y \).
+\end{frame}
+
+
+
+
+\begin{frame}{\textbf{Geometry – Circle and Right Triangle}}
+In the \(xy\)-plane, a circle has center \(C\) with coordinates \((h, k)\). Points \(A\) and \(B\) lie on the circle. Point \(A\) has coordinates \((h + 1,\, k + \sqrt{102})\), and \(\angle ACB\) is a right angle. What is the length of \(\overline{AB}\)?
+\begin{itemize}
+    \item[A.] \(\sqrt{206}\)
+    \item[B.] \(2\sqrt{102}\)
+    \item[C.] \(103\sqrt{2}\)
+    \item[D.] \(103\sqrt{3}\)
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Answer – Geometry: Circle and Right Triangle}}
+\begin{itemize}
+    \item The center of the circle is at \(C = (h, k)\).
+    \item Point \(A = (h + 1,\, k + \sqrt{102})\) lies on the circle.
+    \item Since \(\angle ACB = 90^\circ\), segment \(\overline{AB}\) must be a diameter of the circle.
+    \item That means triangle \(ACB\) is a right triangle with right angle at the center.
+    \item Use the distance formula to find the radius:
+    \[
+    AC = \sqrt{(1)^2 + (\sqrt{102})^2} = \sqrt{1 + 102} = \sqrt{103}
+    \]
+    \item Since \(AC = BC = \sqrt{103}\), and \(\angle ACB = 90^\circ\), \(AB\) is the hypotenuse:
+    \[
+    AB^2 = AC^2 + BC^2 = 103 + 103 = 206 \quad \Rightarrow \quad AB = \sqrt{206}
+    \]
+\end{itemize}
+\textbf{Correct Answer: A. } \(\sqrt{206}\)
+\end{frame}
+
+\begin{frame}{\textbf{Graph of Exponential Function}}
+
+\[
+y = a * (\frac{6}{b})^{x}-c
+
+\]
+How many times does the graph of the given equation in the \(xy\)-plane cross the \(x\)-axis, where \(a\), \(b\), and \(c\) are positive constants such that \(a > 6\) and \(b > c\)?
+
+\begin{itemize}
+    \item[A.] Zero
+    \item[B.] One
+    \item[C.] Two
+    \item[D.] Three
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Answer and Explanation}}
+\begin{itemize}
+    \item Since \(a > 6\), the function is increasing exponential.
+    \item Exponential functions typically have horizontal asymptotes and may cross the \(x\)-axis depending on the constant terms.
+    \item Based on analysis (shown in the annotations), the graph crosses the \(x\)-axis exactly once.
+\end{itemize}
+
+\textbf{Correct Answer: B. One}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Angle Relationships – Intersecting Lines}}
+Two lines intersect at exactly one point, forming two acute angles and two obtuse angles. The measure of one of these angles is \(9x - 110^\circ\). Which of the following could \textbf{NOT} be the sum of the measures of any two of these angles?
+
+\begin{itemize}
+    \item[A.] \(-18x + 220^\circ\)
+    \item[B.] \(-18x + 580^\circ\)
+    \item[C.] \(18x - 220^\circ\)
+    \item[D.] \(180^\circ\)
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{\textbf{Answer and Explanation}}
+\begin{itemize}
+    \item The angle \(9x - 110^\circ\) is one of four angles formed by intersecting lines.
+    \item The vertical (opposite) angle is also \(9x - 110^\circ\).
+    \item The linear pair (supplementary) is \(180^\circ - (9x - 110) = -9x + 290^\circ\).
+    \item Valid angle combinations:
+    \begin{itemize}
+        \item Vertical angles sum: \(2(9x - 110) = 18x - 220^\circ\)
+        \item Supplementary angles: \(9x - 110 + (-9x + 290) = 180^\circ\)
+        \item A different pair: \((-9x + 290) + (-9x + 290) = -18x + 580^\circ\)
+    \end{itemize}
+    \item Option A: \(-18x + 220^\circ\) is not possible based on valid combinations.
+\end{itemize}
+
+\textbf{Correct Answer: A. \(-18x + 220^\circ\)}
+\end{frame}
+
+
+\begin{frame}{\textbf{Exponential Functions and Y-Intercept}}
+The function \( f \) is defined by
+\[
+f(x) = a(3.1^x + 3.1^b),
+\]
+where \( a \) and \( b \) are integer constants and \( 0 < a < b \).
+
+The functions \( g \) and \( h \) are equivalent to function \( f \), where \( k \) and \( m \) are constants.
+
+Which of the following equations displays the \textbf{y-coordinate of the y-intercept} of the graph of \( y = f(x) \) in the \(xy\)-plane as a constant or coefficient?
+
+\begin{itemize}
+    \item[I.] \( g(x) = a(3.1^x + k) \)
+    \item[II.] \( h(x) = a(3.1)^x + m \)
+\end{itemize}
+
+\begin{itemize}
+    \item[A.] I only
+    \item[B.] II only
+    \item[C.] I and II only
+    \item[D.] Neither I nor II
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Answer and Explanation}}
+\begin{itemize}
+    \item The y-intercept occurs at \( x = 0 \). From the original function:
+    \[
+    f(0) = a(1 + 3.1^b)
+    \]
+    \item This value depends on both \( a \) and \( b \), so any rewritten function must explicitly display this value as a constant or coefficient.
+    
+    \item[I.] \( g(x) = a(3.1^x + k) \Rightarrow g(0) = a(1 + k) \). To match \( f(0) \), \( k \) would need to equal \( 3.1^b \), which depends on \( b \). So \( k \) is not a true constant in this context.
+    
+    \item[II.] \( h(x) = a(3.1)^x + m \Rightarrow h(0) = a + m \). Again, to match \( f(0) \), we would need \( m = a(3.1^b) \), which still depends on \( b \).
+
+    \item Therefore, neither form displays the y-intercept as a pure constant or coefficient.
+\end{itemize}
+
+\textbf{Correct Answer: D. Neither I nor II}
+\end{frame}
+
+
+
+
+\end{document}

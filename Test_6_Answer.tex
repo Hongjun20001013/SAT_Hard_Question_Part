@@ -1,0 +1,1035 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.72in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{array,booktabs}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% =========================
+% Novel Prep Brand Colors
+% =========================
+\definecolor{nppurple}{RGB}{98,54,255}
+\definecolor{nppurpledark}{RGB}{76,42,204}
+\definecolor{nplight}{RGB}{240,235,255}
+
+% =========================
+% Page Style
+% =========================
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\textcolor{nppurpledark}{\textbf{Novel Prep Learning Center}}}
+\rhead{\textcolor{nppurpledark}{\textbf{SAT Module II --- Step-by-Step Solutions}}}
+\cfoot{\textcolor{nppurpledark}{\thepage\ of \pageref{LastPage}}}
+\setlength{\headheight}{14pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\renewcommand{\arraystretch}{1.2}
+
+% =========================
+% Circle Number
+% =========================
+\newcommand{\circnum}[1]{%
+\tikz[baseline=(char.base)]{
+\node[
+circle,
+draw=nppurpledark,
+fill=nplight,
+inner sep=1.4pt,
+line width=0.8pt,
+text=nppurpledark
+] (char) {\small\textbf{#1}};
+}}
+
+% =========================
+% Boxes
+% =========================
+\newtcolorbox{answerbox}{
+  colback=nplight,
+  colframe=nppurpledark,
+  boxrule=0.85pt,
+  arc=2pt,
+  left=8pt,right=8pt,top=8pt,bottom=8pt
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{SAT Module II Test}}\\[0.25em]
+    {\Large \textbf{Step-by-Step Answer Key}}\\[0.25em]
+    {\large Novel Prep Learning Center}
+\end{center}
+
+\begin{answerbox}
+\textbf{Final Answer Sheet}
+
+\[
+\begin{array}{c|c@{\qquad}c|c@{\qquad}c|c@{\qquad}c|c}
+1 & B & 2 & C & 3 & D & 4 & B\\
+5 & 1680 & 6 & 700 & 7 & D & 8 & 1.1\\
+9 & D & 10 & A & 11 & D & 12 & C\\
+13 & D & 14 & 60000 & 15 & B & 16 & B\\
+17 & -19 & 18 & 17.2 & 19 & D & 20 & D\\
+21 & 12 & 22 & 9216
+\end{array}
+\]
+\end{answerbox}
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{1}}
+
+A giant panda is predicted to have a mass between
+\[
+\frac{1}{950}
+\quad\text{and}\quad
+\frac{1}{850}
+\]
+times its mother's mass.
+
+The mother's mass is \(95{,}950\) grams.
+
+So the panda's mass \(p\) is between
+\[
+\frac{95{,}950}{950}
+\quad\text{and}\quad
+\frac{95{,}950}{850}.
+\]
+
+Compute:
+\[
+\frac{95{,}950}{950}=101
+\]
+and
+\[
+\frac{95{,}950}{850}\approx 112.88.
+\]
+
+Therefore,
+\[
+101\le p\le 112.89.
+\]
+
+\[
+\boxed{B}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{2}}
+
+The function is
+\[
+f(x)=9000(1+0.03)^x=9000(1.03)^x.
+\]
+
+Here, \(x\) represents the number of years after the investment was made.
+
+So \(f(2)\approx 9474.08\) means:
+
+\[
+\text{2 years after the investment was made, the CD was worth about } \$9474.08.
+\]
+
+\[
+\boxed{C}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{3}}
+
+Hannah saves
+\[
+\frac15h.
+\]
+
+Wyatt saves
+\[
+\frac27w.
+\]
+
+Together, they save \(3270\), so
+\[
+\frac15h+\frac27w=3270.
+\]
+
+Multiply both sides by \(35\):
+\[
+35\left(\frac15h\right)+35\left(\frac27w\right)=35(3270).
+\]
+
+\[
+7h+10w=114{,}450.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{4}}
+
+Data set A has \(21\) values, so the median is the \(11\)th value.
+
+From the table:
+
+\[
+\begin{array}{c|c|c}
+\text{Value} & \text{Frequency} & \text{Positions}\\
+\hline
+0 & 1 & 1\\
+1 & 3 & 2\text{--}4\\
+2 & 4 & 5\text{--}8\\
+3 & 5 & 9\text{--}13
+\end{array}
+\]
+
+The \(11\)th value is \(3\), so the median of data set A is
+\[
+3.
+\]
+
+After removing the incorrect value \(19\), data set B has \(20\) values.
+
+The median is the average of the \(10\)th and \(11\)th values. Both are still \(3\).
+
+So the medians are equal.
+
+\[
+\boxed{B}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{5}}
+
+The volume ratio is
+\[
+\frac{10584\pi}{392\pi}=27.
+\]
+
+For similar solids,
+\[
+\text{volume ratio}=(\text{scale factor})^3.
+\]
+
+So
+\[
+\text{scale factor}=3.
+\]
+
+Surface area scales by the square of the scale factor:
+\[
+3^2=9.
+\]
+
+Now find the surface area of cylinder A.
+
+Given:
+\[
+V=\pi r^2h,\qquad r=7.
+\]
+
+\[
+392\pi=\pi(7^2)h
+\]
+
+\[
+392=49h
+\]
+
+\[
+h=8.
+\]
+
+Surface area formula:
+\[
+SA=2\pi r^2+2\pi rh.
+\]
+
+\[
+SA_A=2\pi(7^2)+2\pi(7)(8)
+\]
+
+\[
+SA_A=98\pi+112\pi=210\pi.
+\]
+
+So
+\[
+k=210.
+\]
+
+Cylinder B has surface area
+\[
+9(210\pi)=1890\pi.
+\]
+
+So
+\[
+n=1890.
+\]
+
+Therefore,
+\[
+n-k=1890-210=1680.
+\]
+
+\[
+\boxed{1680}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{6}}
+
+Let the original number of prey and predators each be \(N\).
+
+Prey increased by \(1900\%\). This means the final number is
+\[
+N+19N=20N.
+\]
+
+Predators increased by \(150\%\). This means the final number is
+\[
+N+1.5N=2.5N.
+\]
+
+Now find how much greater the prey population is than the predator population:
+
+\[
+\frac{20N-2.5N}{2.5N}\times 100
+\]
+
+\[
+=\frac{17.5N}{2.5N}\times 100
+\]
+
+\[
+=7\times 100=700.
+\]
+
+\[
+\boxed{700}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{7}}
+
+Zuri already ran \(4\) miles.
+
+She needs to run an additional \(x\) miles.
+
+Her goal is at least \(16\) miles.
+
+So:
+\[
+4+x\ge 16.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{8}}
+
+The height function is
+\[
+h(t)=-16t^2+b.
+\]
+
+At \(t=0\), the object is \(19.36\) feet above the ground.
+
+So
+\[
+h(0)=b=19.36.
+\]
+
+Thus
+\[
+h(t)=-16t^2+19.36.
+\]
+
+The object hits the ground when
+\[
+h(t)=0.
+\]
+
+\[
+0=-16t^2+19.36
+\]
+
+\[
+16t^2=19.36
+\]
+
+\[
+t^2=1.21
+\]
+
+\[
+t=1.1.
+\]
+
+\[
+\boxed{1.1}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{9}}
+
+The function is
+\[
+f(x)=56(0.19)^x.
+\]
+
+When \(x\) increases by \(1\), the value is multiplied by
+\[
+0.19.
+\]
+
+That means the new value is \(19\%\) of the previous value.
+
+So the decrease is
+\[
+100\%-19\%=81\%.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{10}}
+
+The equation is
+\[
+x^2+\sqrt{k-3}\,x+42=0.
+\]
+
+For a quadratic equation to have exactly one real solution, the discriminant must be \(0\).
+
+\[
+b^2-4ac=0.
+\]
+
+Here:
+\[
+a=1,\qquad b=\sqrt{k-3},\qquad c=42.
+\]
+
+Substitute:
+\[
+(\sqrt{k-3})^2-4(1)(42)=0.
+\]
+
+\[
+k-3-168=0
+\]
+
+\[
+k=171.
+\]
+
+\[
+\boxed{A}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{11}}
+
+The circle is
+\[
+x^2+y^2=36.
+\]
+
+The point is \((-5,y)\), where \(y<0\).
+
+Substitute \(x=-5\):
+
+\[
+(-5)^2+y^2=36
+\]
+
+\[
+25+y^2=36
+\]
+
+\[
+y^2=11.
+\]
+
+Since \(y<0\),
+\[
+y=-\sqrt{11}.
+\]
+
+The line is
+\[
+y=mx+\frac b4.
+\]
+
+Substitute \((-5,-\sqrt{11})\):
+
+\[
+-\sqrt{11}=m(-5)+\frac b4
+\]
+
+\[
+-\sqrt{11}=-5m+\frac b4
+\]
+
+\[
+\frac b4=5m-\sqrt{11}.
+\]
+
+Multiply by \(4\):
+
+\[
+b=20m-4\sqrt{11}.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{12}}
+
+Let \(x\) be the number of grams of the \(0.3\%\) solution.
+
+Then the amount of \(0.15\%\) solution is
+\[
+80-x.
+\]
+
+Convert percentages to decimals:
+\[
+0.3\%=0.003,\qquad 0.15\%=0.0015.
+\]
+
+The amount of sodium chloride is:
+\[
+0.003x+0.0015(80-x)=0.21.
+\]
+
+Expand:
+\[
+0.003x+0.12-0.0015x=0.21.
+\]
+
+\[
+0.0015x+0.12=0.21
+\]
+
+\[
+0.0015x=0.09
+\]
+
+\[
+x=60.
+\]
+
+\[
+\boxed{C}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{13}}
+
+The equation is
+\[
+\frac{x}{5}+\frac{y}{9}=\frac{47}{45}.
+\]
+
+The total resistance is the sum of the individual resistances.
+
+So each type A resistor contributes
+\[
+\frac15
+\]
+ohm.
+
+Each type B resistor contributes
+\[
+\frac19
+\]
+ohm.
+
+Thus:
+\[
+a=\frac15,\qquad b=\frac19.
+\]
+
+The positive difference is
+\[
+\frac15-\frac19.
+\]
+
+Use common denominator \(45\):
+
+\[
+\frac{9}{45}-\frac{5}{45}=\frac4{45}.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{14}}
+
+Object A is \(444\%\) of object B.
+
+\[
+A=4.44B.
+\]
+
+Object A is \(0.740\%\) of object C.
+
+\[
+A=0.00740C.
+\]
+
+Set the expressions equal:
+
+\[
+4.44B=0.00740C.
+\]
+
+Solve for \(C\):
+
+\[
+C=\frac{4.44}{0.00740}B.
+\]
+
+\[
+C=600B.
+\]
+
+If \(C\) is \(p\%\) of \(B\), then
+
+\[
+C=\frac{p}{100}B.
+\]
+
+So
+
+\[
+\frac p{100}=600.
+\]
+
+\[
+p=60000.
+\]
+
+\[
+\boxed{60000}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{15}}
+
+“At most 71 inches” includes the first two height categories:
+
+\[
+48\text{--}59
+\quad \text{and}\quad
+60\text{--}71.
+\]
+
+Total number of participants at most 71 inches tall:
+
+\[
+60+180=240.
+\]
+
+Number from Group 2 at most 71 inches tall:
+
+\[
+10+75=85.
+\]
+
+Probability:
+
+\[
+\frac{85}{240}.
+\]
+
+Simplify by dividing by \(5\):
+
+\[
+\frac{85}{240}=\frac{17}{48}.
+\]
+
+\[
+\boxed{B}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{16}}
+
+The system is:
+\[
+2x+3y=7
+\]
+and
+\[
+10x+15y=35.
+\]
+
+The second equation is just \(5\) times the first equation.
+
+So the system represents the same line.
+
+Let
+\[
+y=r.
+\]
+
+Substitute into
+\[
+2x+3y=7.
+\]
+
+\[
+2x+3r=7
+\]
+
+\[
+2x=7-3r
+\]
+
+\[
+x=\frac{7-3r}{2}.
+\]
+
+So the point is
+
+\[
+\left(\frac{7-3r}{2},r\right)
+=
+\left(-\frac{3r}{2}+\frac72,r\right).
+\]
+
+\[
+\boxed{B}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{17}}
+
+The equation is
+\[
+\frac{1}{cx}=\frac{x}{76}+\frac1c.
+\]
+
+Multiply both sides by \(76cx\):
+
+\[
+76=cx^2+76x.
+\]
+
+Rewrite:
+\[
+cx^2+76x-76=0.
+\]
+
+This quadratic has exactly one solution, so the discriminant is \(0\):
+
+\[
+b^2-4ac=0.
+\]
+
+Here:
+\[
+a=c,\qquad b=76,\qquad c_{\text{constant}}=-76.
+\]
+
+So:
+\[
+76^2-4(c)(-76)=0.
+\]
+
+\[
+5776+304c=0.
+\]
+
+\[
+304c=-5776.
+\]
+
+\[
+c=-19.
+\]
+
+\[
+\boxed{-19}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{18}}
+
+Convert
+\[
+7.7\frac{\text{meters}}{\text{second}^2}
+\]
+to
+\[
+\frac{\text{miles}}{\text{minute}^2}.
+\]
+
+Use:
+\[
+1\text{ mile}=1609\text{ meters}
+\]
+and
+\[
+1\text{ minute}=60\text{ seconds}.
+\]
+
+Since the time unit is squared:
+\[
+1\text{ minute}^2=60^2\text{ seconds}^2=3600\text{ seconds}^2.
+\]
+
+So:
+\[
+7.7\cdot \frac{3600}{1609}.
+\]
+
+\[
+7.7\cdot \frac{3600}{1609}\approx 17.228.
+\]
+
+Rounded to the nearest tenth:
+
+\[
+\boxed{17.2}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{19}}
+
+One gallon covers \(170\) square feet.
+
+The total fence area is \(w\) square feet.
+
+To stain the fence once:
+
+\[
+\frac{w}{170}.
+\]
+
+To stain the fence twice:
+
+\[
+2\cdot \frac{w}{170}.
+\]
+
+\[
+\frac{2w}{170}=\frac{w}{85}.
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{20}}
+
+The function is
+\[
+f(x)=66b^x.
+\]
+
+When \(x\) increases by \(1\):
+
+\[
+f(x+1)=66b^{x+1}.
+\]
+
+\[
+f(x+1)=b\cdot 66b^x.
+\]
+
+So the multiplier is
+\[
+b.
+\]
+
+If the function increases by \(c\%\), then the multiplier is
+
+\[
+1+\frac{c}{100}.
+\]
+
+Thus:
+
+\[
+b=1+\frac{c}{100}.
+\]
+
+\[
+b-1=\frac{c}{100}.
+\]
+
+\[
+c=100(b-1).
+\]
+
+\[
+\boxed{D}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{21}}
+
+The equation is
+\[
+\frac{1}{24}x^2+\left(s-\frac{1}{24}t\right)x-st=0.
+\]
+
+For a quadratic equation
+\[
+ax^2+bx+c=0,
+\]
+the product of the solutions is
+\[
+\frac{c}{a}.
+\]
+
+Here:
+\[
+a=\frac{1}{24},
+\qquad
+c=-st.
+\]
+
+So the product of the solutions is
+
+\[
+\frac{-st}{\frac{1}{24}}.
+\]
+
+\[
+=-24st.
+\]
+
+The problem says the product is
+
+\[
+-2kst.
+\]
+
+So:
+
+\[
+-2kst=-24st.
+\]
+
+Since \(s,t>0\), divide by \(-2st\):
+
+\[
+k=12.
+\]
+
+\[
+\boxed{12}
+\]
+
+\bigskip
+
+% =====================================================
+\textbf{\circnum{22}}
+
+A triangular pyramid has \(4\) triangular faces.
+
+If all \(6\) edges are \(96\) cm, then each face is an equilateral triangle with side length \(96\).
+
+Area of one equilateral triangle:
+
+\[
+A=\frac{\sqrt3}{4}s^2.
+\]
+
+Substitute \(s=96\):
+
+\[
+A=\frac{\sqrt3}{4}(96)^2.
+\]
+
+\[
+96^2=9216.
+\]
+
+\[
+A=\frac{9216\sqrt3}{4}=2304\sqrt3.
+\]
+
+There are \(4\) faces:
+
+\[
+SA=4(2304\sqrt3)=9216\sqrt3.
+\]
+
+The surface area is given as
+\[
+k\sqrt3.
+\]
+
+So
+
+\[
+k=9216.
+\]
+
+\[
+\boxed{9216}
+\]
+
+\end{document}

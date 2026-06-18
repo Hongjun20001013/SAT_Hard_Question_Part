@@ -1,0 +1,517 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+% 自定义颜色
+\definecolor{purpleblue}{RGB}{80, 80, 180}
+\definecolor{lightgray}{RGB}{230, 230, 230}
+\definecolor{novelPurple}{RGB}{98, 54, 255} 
+\definecolor{darkgray}{RGB}{50, 50, 50}
+
+% 主题设置
+\usetheme{Madrid}  
+\usecolortheme{dolphin} 
+
+% 设置字体（移除 fontspec，确保 pdfLaTeX 兼容）
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{frametitle}{size=\LARGE,series=\bfseries}
+\setbeamercolor{frametitle}{fg=white, bg=novelPurple}
+\setbeamercolor{title}{fg=white, bg=purpleblue}
+
+% 封面信息
+\title[SAT Hard Question]{\textbf{SAT Hard Question 1}}
+\author{\textbf{Jack Zeng}}
+\institute{\textcolor{white}{\textbf{Novel Prep}}}
+\date{\today} 
+
+\begin{document}
+
+% --- Title Slide ---
+\begin{frame}
+    \titlepage
+    \vfill
+    \begin{flushright}
+        \textcolor{purpleblue}{\Huge \textbf{Novel Prep}}
+    \end{flushright}
+\end{frame}
+
+
+\begin{frame}
+    \begin{tikzpicture}[remember picture, overlay]
+        % 设置浅色渐变背景
+        \shade[top color=softPurple, bottom color=softGray] 
+            (current page.north west) rectangle (current page.south east);
+        
+        % 添加高斯模糊光晕
+        \fill[white, opacity=0.3] (current page.center) circle (4cm);
+        
+        % 主标题
+        \node[align=center] at (current page.center) {
+            {\Huge\bfseries\textcolor{purpleblue}{Novel Prep}} \\[0.5cm]
+            {\Large\itshape\textcolor{lightText}{Excellence in SAT Prep}}
+        };
+
+        % 添加柔和光点（点缀）
+        \foreach \x in {1,2,3,4,5} {
+            \fill[purpleblue, opacity=0.2] (rand*10-5, rand*7-3.5) circle (0.1+\x*0.05);
+        }
+
+        ;
+    \end{tikzpicture}
+\end{frame}
+
+
+% Question 1
+\begin{frame}{\textbf{Question: Greatest Possible Value }}
+    \textbf{In the given expression,} \( a \) and \( c \) are positive constants.  
+    If \( px + q \) is a factor of the expression:
+    \[
+    ax^2 + 176x + c = (px + q)(rx + s),
+    \]
+    where \( p \) and \( q \) are positive constants, what is the greatest possible value of \( ac \)?
+
+    \vspace{0.5cm}
+\end{frame}
+
+% --- Answer Explanation 1 ---
+\begin{frame}{\textbf{Answer Explanation: Maximum Value of \( ac \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{7744} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item We use the discriminant condition:
+        \[
+        \Delta = b^2 - 4ac > 0.
+        \]
+        \item Substituting \( b = 176 \):
+        \[
+        176^2 - 4ac > 0.
+        \]
+        \item Simplifying:
+        \[
+        4ac \leq 176^2.
+        \]
+        \item Solving for \( ac \):
+        \[
+        ac \leq 7744.
+        \]
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{7744} \).
+\end{frame}
+
+
+
+\begin{frame}{\textbf{Question: Finding the Greatest Possible Value of \( b \)}}
+    In the given expression:
+    \[
+    34z^{18} + bz^9 + 30,
+    \]
+    \( b \) is a positive integer.  
+
+    \vspace{0.3cm}
+    If \( qz^9 + r \) is a factor of the expression, where \( q \) and \( r \) are positive integers, what is the greatest possible value of \( b \)?
+\end{frame}
+
+% --- Answer Explanation 2 ---
+\begin{frame}{\textbf{Answer Explanation: Maximum Value of \( b \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{1021} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Compute \( b \) using factor constraints:
+        \[
+        b = 34 \times 30 + 1.
+        \]
+        \item Performing the calculation:
+        \[
+        b = 1021.
+        \]
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{1021} \).
+\end{frame}
+
+% --- Question 3 ---
+\begin{frame}{\textbf{Question: Finding the Value of \( a + c \)}}
+    The expression:
+    \[
+    6x^4 + 17x^2 + 7
+    \]
+    can be rewritten as:
+    \[
+    (3x^2 + a)(2x^2 + b),
+    \]
+    where \( a \) and \( b \) are positive integers, or as:
+    \[
+    (3x^2 + c)(2x^2 + d),
+    \]
+    where \( c \) and \( d \) are positive non-integers.  
+
+    \vspace{0.3cm}
+    What is the value of \( a + c \)?
+\end{frame}
+
+\begin{frame}{Answer}
+We are given:
+\[
+6x^4 + 17x^2 + 7
+\]
+
+We want to factor this as:
+\[
+(3x^2 + a)(2x^2 + b)
+\]
+
+Multiply:
+\[
+(3x^2 + a)(2x^2 + b) = 6x^4 + (2a + 3b)x^2 + ab
+\]
+
+Match coefficients:
+\[
+6x^4 + (2a + 3b)x^2 + ab = 6x^4 + 17x^2 + 7
+\Rightarrow
+\begin{cases}
+ab = 7 \\
+2a + 3b = 17
+\end{cases}
+\]
+
+
+
+
+\textbf{Final Answer:} $\boxed{\dfrac{17}{2}}$
+\end{frame}
+
+
+% --- Question 4 ---
+\begin{frame}{\textbf{Question: Finding the Smallest Possible Value of \( ab \)}}
+    The given quadratic function:
+    \[
+    54x^4 + 219x^2 + 105
+    \]
+    has factors in the form:
+    \[
+    (k)(ax^2 + b)(cx^2 + d).
+    \]
+    If \( a, b, c, d, \) and \( k \) are integers, what is the smallest possible value of \( ab \)?
+\end{frame}
+
+\begin{frame}{Answer}
+    \textbf{Final Answer:} $\boxed{14}$
+\end{frame}
+
+
+% --- Question 5 ---
+\begin{frame}{\textbf{Question: Finding \( a - b - c \)}}
+    The equation of a parabola is written in the form:
+    \[
+    y = ax^2 + bx + c,
+    \]
+    where \( a, b, \) and \( c \) are constants.  
+
+    \vspace{0.3cm}
+    When graphed in the \( xy \)-plane, the parabola has vertex \( (-1, 4) \) and does not intersect the \( x \)-axis.  
+
+    \vspace{0.3cm}
+    Which of the following could be the value of \( a - b - c \)?
+    \textbf{Options:}
+    \begin{enumerate}
+        \item[A] 2
+        \item[B] 4
+        \item[C] -1
+        \item[D] -6
+    \end{enumerate}
+
+
+    
+\end{frame}
+
+
+
+
+% --- Answer Explanation 5 ---
+\begin{frame}{\textbf{Answer Explanation: Finding \( a - b - c \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{D} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Since the parabola does not intersect the \( x \)-axis, the discriminant condition is:
+        \[
+        \Delta = b^2 - 4ac < 0.
+        \]
+        \item Solving the given system:
+        \[
+        \boxed{D}.
+        \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\textbf{Question: Maximum Value of \( b \)}}
+    A quadratic function with vertex \( (1, 32) \) can be written as:
+    \[
+    -ax^2 + bx + c \quad (a, b, c \text{ are all positive integers}).
+    \]
+    What is the maximum value of \( b \)?
+\end{frame}
+
+% --- Answer Explanation 6 ---
+\begin{frame}{\textbf{Answer Explanation: Maximum Value of \( b \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{62} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Given:
+        \[
+        b = 2a \quad \text{and maximum } a + c = 32.
+        \]
+        \item Solving for \( b_{\text{max}} \):
+        \[
+        b_{\text{max}} = \boxed{62}.
+        \]
+    \end{itemize}
+\end{frame}
+
+% --- Question 7 ---
+\begin{frame}{\textbf{Question: Converting Acceleration Units}}
+    An object's speed is increasing at a rate of \( 7.7 \, \text{m/s}^2 \).  
+
+    \vspace{0.3cm}
+    What is this rate in miles per minute squared, rounded to the nearest tenth?  
+
+    (Use \( 1 \, \text{mile} = 1,609 \, \text{meters} \).)
+
+    \vspace{0.5cm}
+    \textbf{Options:}
+    \begin{enumerate}
+        \item[A] 0.3
+        \item[B] 17.2
+        \item[C] 206.5
+        \item[D] 209
+    \end{enumerate}
+\end{frame}
+
+% --- Answer Explanation 7 ---
+\begin{frame}{\textbf{Answer Explanation: Converting Acceleration Units}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{17.2} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Convert units:
+        \[
+        7.7 \, \frac{\text{m}}{\text{s}^2} \times \left(\frac{60 \, \text{s}}{1 \, \text{min}}\right)^2 \times \frac{1 \, \text{mile}}{1609 \, \text{m}}.
+        \]
+        \item Simplify:
+        \[
+        7.7 \times \frac{3600}{1609}.
+        \]
+        \item Approximate:
+        \[
+        \approx 17.2 \, \frac{\text{miles}}{\text{min}^2}.
+        \]
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{17.2} \).
+\end{frame}
+
+% --- Question 8 ---
+\begin{frame}{\textbf{Question: Finding \( f(5) \)}}
+    The function \( f \) is defined by:
+    \[
+    f(x) = ab^{x/n},
+    \]
+    where \( a, b, \) and \( n \) are constants, and \( b, n \) are integers.  
+
+    \vspace{0.3cm}
+    If \( f(2) = 6 \) and \( f(4) = 150 \), what is the value of \( f(5) \)?
+\end{frame}
+
+% --- Answer Explanation 8 ---
+\begin{frame}{\textbf{Answer Explanation: Finding \( f(5) \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{750} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Given:
+        \[
+        f(2) = 6 \implies a \cdot b^{2/n} = 6.
+        \]
+        \[
+        f(4) = 150 \implies a \cdot b^{4/n} = 150.
+        \]
+        \item Divide equations:
+        \[
+        \frac{b^{4/n}}{b^{2/n}} = b^{2/n}, \quad b^{2/n} = 25 \implies b^{1/n} = 5.
+        \]
+        \item Solve for \( f(5) \):
+        \[
+        f(5) = a \cdot b^{5/n} = \frac{6}{25} \cdot (5^5) = \frac{6}{25} \times 3125.
+        \]
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{750} \).
+\end{frame}
+
+\vspace{1cm}
+
+\begin{frame}{\textbf{Question: Positive Difference Between \( a \) and \( b \)}}
+    The quadratic equation graph of \( y = f(x) \) in the \( xy \)-plane has:
+    \begin{itemize}
+        \item A vertex at \( (4, -7) \).
+        \item Contains the point \( (3, -9) \).
+        \item Has a \( y \)-intercept at \( (0, a) \).
+        \item The graph of \( y = 6 \cdot f(x) \) has a \( y \)-intercept at \( (0, b) \).
+    \end{itemize}
+    What is the positive difference between \( a \) and \( b \)?
+\end{frame}
+
+% --- Answer Explanation 9 ---
+\begin{frame}{\textbf{Answer Explanation}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{195} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Equation of the parabola:
+        \[
+        f(x) = k(x - 4)^2 - 7.
+        \]
+        \item Substitute \( (3, -9) \) to find \( k \):
+        \[
+        -9 = k(3 - 4)^2 - 7 \implies k = -2.
+        \]
+        \item Thus, the equation becomes:
+        \[
+        f(x) = -2(x - 4)^2 - 7.
+        \]
+        \item Find \( a \):
+        \[
+        a = f(0) = -39.
+        \]
+        \item Find \( b \) for \( y = 6 \cdot f(x) \):
+        \[
+        b = 6 \cdot (-39) = -234.
+        \]
+
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Answer Explanation}
+
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{195} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+ \begin{itemize}
+             \item Compute the positive difference:
+        \[
+        |a - b| = |234 - 39| = \boxed{195}.
+        \]
+ \end{itemize}
+    
+\end{frame}
+
+% --- Question 10 ---
+\begin{frame}{\textbf{Question: Finding \( a + b \)}}
+    The function \( f \) is defined by:
+    \[
+    f(x) = ax^2 + bx + c,
+    \]
+    where \( a, b, \) and \( c \) are constants.  
+
+    \vspace{0.3cm}
+    The graph of \( y = f(x) \) in the \( xy \)-plane passes through the points \( (9,0) \) and \( (-2,0) \).  
+
+    \vspace{0.3cm}
+    If \( a \) is an integer greater than 1, which of the following could be the value of \( a + b \)?
+
+    \vspace{0.5cm}
+    \textbf{Options:}
+    \begin{enumerate}
+        \item[A] 8
+        \item[B] 7
+        \item[C] -6
+        \item[D] -12
+    \end{enumerate}
+\end{frame}
+
+% --- Answer Explanation 10 ---
+\begin{frame}{\textbf{Answer Explanation: Finding \( a + b \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{-12} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item Factorize the quadratic equation:
+        \[
+        f(x) = a(x - 9)(x + 2) = a(x^2 - 7x - 18).
+        \]
+        \item From this equation:
+        \[
+        b = -7a, \quad c = -18a.
+        \]
+        \item For \( a \geq 2 \), calculate:
+        \[
+        a + b = a - 7a = -6a.
+        \]
+        \item Possible values:
+        \[
+        a + b = -12 \quad \text{when } a = 2.
+        \]
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{-12} \).
+\end{frame}
+
+% --- Question 11 ---
+\begin{frame}{\textbf{Question: Finding a Factor of \( x + 2b \)}}
+    Which of the following expressions has a factor of \( x + 2b \), where \( b \) is a positive integer constant?
+
+    \vspace{0.3cm}
+    \[
+    f(x) =
+    \begin{cases} 
+    A: 3x^2 + 7x + 14b, \\ 
+    B: 3x^2 + 22x + 14b, \\ 
+    C: 3x^2 + 30x + 14b, \\ 
+    D: 3x^2 + 37x + 14b.
+    \end{cases}
+    \]
+\end{frame}
+
+% --- Answer Explanation 11 ---
+\begin{frame}{\textbf{Answer Explanation: Finding a Factor of \( x + 2b \)}}
+    \textbf{Correct Answer: \textcolor{novelPurple}{\( \mathbf{D} \)}}  
+
+    \vspace{0.3cm}
+    \textbf{Solution:}
+    \begin{itemize}
+        \item By the factor theorem:
+        \[
+        \text{If } (x - c) \text{ is a factor of } f(x), \text{ then } f(c) = 0.
+        \]
+        \item Let \( x + 2b \) be a factor of \( f(x) \). Substitute \( x = -2b \):
+        \[
+        f(-2b) = 0.
+        \]
+        \item Calculate for each option, and we find that when \( b = 5 \), only:
+        \[
+        f(x) = 3x^2 + 37x + 14b
+        \]
+        satisfies \( f(-2b) = 0 \).
+    \end{itemize}
+    \textbf{Final Answer:} \( \boxed{D} \).
+\end{frame}
+
+
+
+
+
+
+
+
+\end{document}

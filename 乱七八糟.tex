@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{pifont}
+
+\newcommand{\optionbutton}{
+  \tikz[baseline=-0.6ex] \draw (0,0) circle (0.12cm);
+}
+
+\newtcolorbox{questionblock}[2][]{%
+  enhanced,
+  sharp corners,
+  colback=white,
+  colframe=black,
+  boxrule=0.5pt,
+  fonttitle=\bfseries,
+  title={\textcolor{white}{\textbf{#2}} \hspace{1cm} \textnormal{\ding{72} Mark for Review} \hfill \texttt{ABC}},
+  attach boxed title to top center={yshift=-2mm},
+  boxed title style={colback=black, colframe=black, top=2pt, bottom=2pt, left=4pt, right=4pt},
+  #1
+}
+
+\begin{document}
+
+
+\begin{questionblock}{1}
+
+\vspace{1em}
+
+\begin{center}
+\includegraphics[width=0.45\textwidth]{graph-placeholder.png} 
+\end{center}
+
+\vspace{0.5em}
+
+\noindent
+The graph shows the height above ground, in meters, of a ball \( x \) seconds after the ball was launched upward from a platform. Which statement is the best interpretation of the marked point (1.0, 4.8) in this context?
+
+\vspace{1em}
+
+\begin{tcolorbox}[colback=white, colframe=gray, sharp corners=south, boxrule=0.3pt, width=\linewidth]
+\textbf{A.} \ 1.0 second after being launched, the ball's height above ground is 4.8 meters.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white, colframe=gray, sharp corners=south, boxrule=0.3pt, width=\linewidth]
+\textbf{B.} \ 4.8 seconds after being launched, the ball's height above ground is 1.0 meter.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white, colframe=gray, sharp corners=south, boxrule=0.3pt, width=\linewidth]
+\textbf{C.} \ The ball was launched from an initial height of 1.0 meter with an initial velocity of 4.8 meters per second.
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white, colframe=gray, sharp corners=south, boxrule=0.3pt, width=\linewidth]
+\textbf{D.} \ The ball was launched from an initial height of 4.8 meters with an initial velocity of 1.0 meter per second.
+\end{tcolorbox}
+
+\end{questionblock}
+
+\end{document}

@@ -1,0 +1,1108 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.5pt}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Novel Prep SAT}
+\rhead{Hard Question Test 5 --- Solutions}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{SAT Hard Question Test 5 Answer --- Full Solutions}}\\[0.5em]
+    {\large Step-by-step Answer Key}
+\end{center}
+
+\section*{1. Function with radicals}
+
+Given
+\[
+f(x)=a\sqrt{x-b}+12\sqrt{x-b}.
+\]
+Combine like terms:
+\[
+f(x)=(a+12)\sqrt{x-b}.
+\]
+
+Since $f(4)=0$,
+\[
+(a+12)\sqrt{4-b}=0.
+\]
+Also $f(5)>0$. If $a+12=0$, then $f(x)=0$ for all $x$ in the domain, which would contradict $f(5)>0$.
+
+So we must have
+\[
+\sqrt{4-b}=0 \quad \Rightarrow \quad 4-b=0 \quad \Rightarrow \quad b=4.
+\]
+
+Now
+\[
+f(5)=(a+12)\sqrt{5-4}=a+12>0,
+\]
+so
+\[
+a>-12.
+\]
+
+Thus
+\[
+a+b=a+4>-8.
+\]
+Among the answer choices, the only possible value is
+\[
+\boxed{-4}.
+\]
+
+\section*{2. Solving for $a$}
+
+Given
+\[
+\frac{16}{a}=\frac{16}{b}+\frac{16}{c}.
+\]
+Divide both sides by $16$:
+\[
+\frac{1}{a}=\frac{1}{b}+\frac{1}{c}.
+\]
+Combine the fractions on the right:
+\[
+\frac{1}{a}=\frac{b+c}{bc}.
+\]
+Take the reciprocal:
+\[
+a=\frac{bc}{b+c}.
+\]
+
+\[
+\boxed{a=\frac{bc}{b+c}}
+\]
+
+\section*{3. Rational expression}
+
+Given
+\[
+\frac{ax^3+bx^2+cx+d}{(x^2-9)(x+2)}=\frac{5}{x+3}+\frac{6x}{x-3}.
+\]
+Since
+\[
+x^2-9=(x-3)(x+3),
+\]
+the denominator is
+\[
+(x-3)(x+3)(x+2).
+\]
+
+Multiply both sides by $(x-3)(x+3)(x+2)$:
+\[
+ax^3+bx^2+cx+d=5(x-3)(x+2)+6x(x+3)(x+2).
+\]
+
+Expand:
+\[
+5(x-3)(x+2)=5(x^2-x-6)=5x^2-5x-30,
+\]
+and
+\[
+6x(x+3)(x+2)=6x(x^2+5x+6)=6x^3+30x^2+36x.
+\]
+
+Add:
+\[
+ax^3+bx^2+cx+d=6x^3+35x^2+31x-30.
+\]
+
+So
+\[
+a=6,\quad b=35,\quad c=31.
+\]
+Therefore,
+\[
+a+b+c=6+35+31=72.
+\]
+
+\[
+\boxed{72}
+\]
+
+\section*{4. Lawn mowing companies}
+
+Company A charges \$80 for the first hour, then \$60 for each additional hour.
+
+For $t>1$ hours:
+\[
+A(t)=80+60(t-1)=20+60t.
+\]
+
+Company B charges
+\[
+B(t)=75t.
+\]
+
+We want Company B to exceed Company A:
+\[
+75t>20+60t.
+\]
+So
+\[
+15t>20
+\]
+and
+\[
+t>\frac{20}{15}=\frac{4}{3}\text{ hours}.
+\]
+
+Convert to minutes:
+\[
+\frac{4}{3}\cdot 60=80.
+\]
+
+So after $80$ minutes, Company B begins to exceed Company A.
+
+\[
+\boxed{80}
+\]
+
+\section*{5. Infinite solutions}
+
+Given
+\[
+\frac{5}{6}x+ay=b
+\]
+and
+\[
+\frac{11}{10}x+cy=2d.
+\]
+
+If the system has infinite solutions, the equations must be multiples of each other. Thus
+\[
+\frac{\frac56}{\frac{11}{10}}=\frac{b}{2d}.
+\]
+
+Compute:
+\[
+\frac56\cdot\frac{10}{11}=\frac{50}{66}=\frac{25}{33}.
+\]
+
+So
+\[
+\frac{b}{2d}=\frac{25}{33}.
+\]
+Multiply both sides by $2$:
+\[
+\frac{b}{d}=\frac{50}{33}.
+\]
+
+\[
+\boxed{\frac{50}{33}}
+\]
+
+\section*{6. Percent relationships}
+
+``$a$ is 540\% more than $b$'' means
+\[
+a=b+5.40b=6.40b.
+\]
+
+``$b$ is $0.02\%$ of $c$'' means
+\[
+b=0.0002c.
+\]
+
+Substitute:
+\[
+a=6.40(0.0002c)=0.00128c.
+\]
+
+Convert to percent:
+\[
+0.00128=0.128\%.
+\]
+
+So if $a$ is $k\%$ of $c$, then
+\[
+\boxed{k=0.128}.
+\]
+
+\section*{7. Investment growth}
+
+Given
+\[
+f(t)=a\cdot 2^{\frac{2t}{11}}.
+\]
+
+The initial investment is
+\[
+f(0)=a.
+\]
+
+An increase by $700\%$ means the new amount is
+\[
+100\%+700\%=800\%
+\]
+of the original, so the new amount is
+\[
+8a.
+\]
+
+Set up:
+\[
+a\cdot 2^{\frac{2t}{11}}=8a.
+\]
+Divide by $a$:
+\[
+2^{\frac{2t}{11}}=8=2^3.
+\]
+So
+\[
+\frac{2t}{11}=3
+\]
+and
+\[
+t=\frac{33}{2}=16.5\text{ years}.
+\]
+
+Convert to months:
+\[
+16.5\cdot 12=198.
+\]
+
+\[
+\boxed{198}
+\]
+
+\section*{8. Exponential function}
+
+Given
+\[
+f(x)=k^3(k^x)+b,\qquad x\ge 0,
+\]
+where $k$ and $b$ are positive constants and $k<1$.
+
+This simplifies to
+\[
+f(x)=k^{x+3}+b.
+\]
+
+\textbf{I.} The maximum value is displayed as a constant or coefficient.
+
+Since $0<k<1$, $k^{x+3}$ decreases as $x$ increases. The maximum occurs at $x=0$:
+\[
+f(0)=k^3+b.
+\]
+This is not shown as a single constant or coefficient in the function. So I is false.
+
+\textbf{II.} $f(1)=f(0)\cdot k$
+
+Compute:
+\[
+f(1)=k^4+b
+\]
+while
+\[
+f(0)\cdot k=(k^3+b)k=k^4+bk.
+\]
+These are not always equal. So II is false.
+
+\textbf{III.} $f(a)<b$ for some $a>0$
+
+But
+\[
+f(a)=k^{a+3}+b.
+\]
+Since $k^{a+3}>0$,
+\[
+f(a)>b
+\]
+for all $a>0$. So III is false.
+
+Therefore none of I, II, III must be true.
+
+\[
+\boxed{\text{D}}
+\]
+
+\section*{9. Maximum value of $k$}
+
+Given
+\[
+15x^{18}+kx^9+24
+\]
+has factors
+\[
+ax^9+b \quad \text{and} \quad cx^9+d,
+\]
+with integers $a,b,c,d$.
+
+Let
+\[
+y=x^9.
+\]
+Then
+\[
+15y^2+ky+24=(ay+b)(cy+d).
+\]
+
+Expanding:
+\[
+(ay+b)(cy+d)=acy^2+(ad+bc)y+bd.
+\]
+So
+\[
+ac=15,\qquad bd=24,\qquad k=ad+bc.
+\]
+
+To maximize $k$, choose factor pairs to make $ad+bc$ as large as possible.
+
+Take
+\[
+a=15,\ c=1,\ b=1,\ d=24.
+\]
+Then
+\[
+k=ad+bc=15(24)+1(1)=360+1=361.
+\]
+
+Thus the maximum value is
+\[
+\boxed{361}.
+\]
+
+\section*{10. Factored quadratic expression}
+
+Given
+\[
+(hx+k)(qx+z)=ax^2+bx+35
+\]
+with integers $h,k,q,z$.
+
+Expanding:
+\[
+(hx+k)(qx+z)=hqx^2+(hz+kq)x+kz.
+\]
+Therefore
+\[
+a=hq,\qquad b=hz+kq,\qquad kz=35.
+\]
+
+\textbf{I.} $\dfrac{35}{k}$
+
+Since $kz=35$ and $k,z$ are integers,
+\[
+\frac{35}{k}=z,
+\]
+which is an integer. So I is true.
+
+\textbf{II.} $b$
+
+Since
+\[
+b=hz+kq,
+\]
+and all variables are integers, $b$ must be an integer. So II is true.
+
+\textbf{III.} $-\dfrac{a}{q}$
+
+Since
+\[
+a=hq,
+\]
+then
+\[
+-\frac{a}{q}=-\frac{hq}{q}=-h,
+\]
+which is an integer. So III is true.
+
+\[
+\boxed{\text{D}}
+\]
+
+\section*{11. Quadratic with equal outputs}
+
+Given
+\[
+f(x)=-3x^2+bx+c.
+\]
+
+Also
+\[
+f(-4)=f(8).
+\]
+Since a parabola is symmetric about its axis, the axis is the midpoint of $-4$ and $8$:
+\[
+x=\frac{-4+8}{2}=2.
+\]
+
+For
+\[
+f(x)=ax^2+bx+c,
+\]
+the axis is
+\[
+x=-\frac{b}{2a}.
+\]
+Here $a=-3$, so
+\[
+x=-\frac{b}{2(-3)}=\frac{b}{6}.
+\]
+Thus
+\[
+\frac{b}{6}=2 \Rightarrow b=12.
+\]
+
+\textbf{I.} $r+s=4$
+
+The sum of the roots is
+\[
+-\frac{b}{a}=-\frac{12}{-3}=4.
+\]
+So I is true.
+
+\textbf{II.} $b<0$
+
+But $b=12>0$, so II is false.
+
+\textbf{III.} $c<k$
+
+Since the parabola opens downward, the vertex gives the maximum value. Since the axis is at $x=2$, the vertex is not at $x=0$, so
+\[
+f(2)=k>f(0)=c.
+\]
+Thus
+\[
+c<k.
+\]
+III is true.
+
+So I and III only.
+
+\[
+\boxed{\text{C}}
+\]
+
+\section*{12. Rock height model}
+
+The rock reaches its maximum height of $200$ feet at $t=3$, and hits the ground at $t=8$.
+
+Since the axis of symmetry is at $t=3$, and one root is at $t=8$, the other root must be at
+\[
+t=3-(8-3)= -2.
+\]
+
+So the quadratic can be written as
+\[
+h(t)=a(t+2)(t-8).
+\]
+
+Use the maximum point $(3,200)$:
+\[
+200=a(3+2)(3-8)=a(5)(-5)=-25a.
+\]
+Thus
+\[
+a=-8.
+\]
+
+Now find the initial height:
+\[
+c=h(0)=-8(0+2)(0-8)=-8(2)(-8)=128.
+\]
+
+\[
+\boxed{128}
+\]
+
+\section*{13. Quadratic with one real solution}
+
+Given
+\[
+2rx^2-5sx+8r=0
+\]
+has one real solution and
+\[
+rs=160.
+\]
+
+For one real solution, the discriminant is zero:
+\[
+(-5s)^2-4(2r)(8r)=0.
+\]
+So
+\[
+25s^2-64r^2=0
+\]
+and
+\[
+25s^2=64r^2.
+\]
+Thus
+\[
+5|s|=8|r|.
+\]
+
+This suggests
+\[
+|r|=10,\qquad |s|=16
+\]
+because
+\[
+5(16)=8(10)=80
+\]
+and
+\[
+|rs|=10\cdot 16=160.
+\]
+
+Since $rs=160>0$, $r$ and $s$ have the same sign, so
+\[
+|r+s|=|10+16|=26.
+\]
+
+\[
+\boxed{26}
+\]
+
+\section*{14. Polynomial sign analysis}
+
+Given
+\[
+f(x)=-(x+a)^2(x-b)(x-c),
+\]
+where $a,b,c$ are positive constants and
+\[
+b<k<c.
+\]
+
+\textbf{I.} $k>0$
+
+Since $b>0$ and $k>b$, we must have
+\[
+k>0.
+\]
+So I is true.
+
+\textbf{II.} $f(k)>0$
+
+Evaluate the signs:
+\[
+(k+a)^2>0,
+\]
+\[
+k-b>0,
+\]
+\[
+k-c<0.
+\]
+So
+\[
+(x-b)(x-c)\Big|_{x=k}=(k-b)(k-c)<0.
+\]
+Then
+\[
+-(k+a)^2(k-b)(k-c)>0.
+\]
+So II is true.
+
+\textbf{III.} $f(0)>0$
+
+Compute:
+\[
+f(0)=-(a)^2(-b)(-c).
+\]
+Since $(-b)(-c)=bc>0$, we get
+\[
+f(0)=-a^2bc<0.
+\]
+So III is false.
+
+Therefore I and II only.
+
+\[
+\boxed{\text{A}}
+\]
+
+\section*{15. Consecutive even integers}
+
+Let the three consecutive even integers be
+\[
+n,\ n+2,\ n+4.
+\]
+The condition says:
+\[
+5n \ge 9 + \big((n+2)+(n+4)\big).
+\]
+Simplify:
+\[
+5n \ge 9 + 2n + 6
+\]
+\[
+5n \ge 2n+15
+\]
+\[
+3n \ge 15
+\]
+\[
+n \ge 5.
+\]
+
+Since $n$ must be even, the smallest possible value is
+\[
+n=6.
+\]
+Thus the second integer is
+\[
+6+2=8.
+\]
+
+\[
+\boxed{8}
+\]
+
+\section*{16. Unit conversion}
+
+Given
+\[
+108 \text{ kilometers per hour}^2.
+\]
+
+Convert kilometers to meters:
+\[
+108\text{ km/hr}^2 = 108{,}000 \text{ m/hr}^2.
+\]
+
+Now convert hour$^2$ to minute$^2$:
+\[
+1\text{ hr} = 60\text{ min} \Rightarrow 1\text{ hr}^2 = 60^2=3600\text{ min}^2.
+\]
+
+So
+\[
+108{,}000\div 3600=30.
+\]
+
+\[
+\boxed{30}
+\]
+
+\section*{17. Right triangle statements}
+
+In $\triangle ABC$, $\angle B=90^\circ$, $AB=12$, and $D$ lies on segment $AC$.
+
+\textbf{I.} $BC=12\tan(\angle CAB)$
+
+By definition,
+\[
+\tan(\angle CAB)=\frac{BC}{AB}=\frac{BC}{12}.
+\]
+Thus
+\[
+BC=12\tan(\angle CAB).
+\]
+So I is true.
+
+\textbf{II.} $\cos(\angle ABD)-\sin(\angle DBC)=0$
+
+Since $D$ lies on $AC$, ray $BD$ splits the right angle at $B$:
+\[
+\angle ABD+\angle DBC=90^\circ.
+\]
+Therefore the two angles are complementary, so
+\[
+\cos(\angle ABD)=\sin(\angle DBC).
+\]
+Hence
+\[
+\cos(\angle ABD)-\sin(\angle DBC)=0.
+\]
+So II is true.
+
+\textbf{III.} $\angle ABD=\angle BDC$
+
+This is not always true just because $D$ is on $AC$. There is not enough information.
+
+So I and II only.
+
+\[
+\boxed{\text{A}}
+\]
+
+\section*{18. Altitude in right triangle}
+
+In $\triangle ABC$, $\angle B=90^\circ$, $BD$ is an altitude to hypotenuse $AC$, $BC=10$, and
+\[
+\angle ABD=60^\circ.
+\]
+
+Since $BD\perp AC$, triangle $ABD$ is a right triangle with $\angle ADB=90^\circ$. Therefore
+\[
+\angle BAD=30^\circ.
+\]
+
+Because $\angle BAD=\angle A$ in the large triangle, $\triangle ABC$ is a $30^\circ$-$60^\circ$-$90^\circ$ triangle. Side $BC$ is opposite $30^\circ$, so it is the short leg:
+\[
+BC=10.
+\]
+Thus the hypotenuse is
+\[
+AC=20,
+\]
+and the other leg is
+\[
+AB=10\sqrt3.
+\]
+
+Using the right triangle altitude relationship,
+\[
+AD=\frac{AB^2}{AC}.
+\]
+So
+\[
+AD=\frac{(10\sqrt3)^2}{20}=\frac{300}{20}=15.
+\]
+
+\[
+\boxed{15}
+\]
+
+\section*{19. Arc length}
+
+The inscribed angle at $C$ is $20^\circ$. Therefore the intercepted arc $AB$ has measure
+\[
+2(20^\circ)=40^\circ.
+\]
+
+Since $AC$ is a diameter, the arc from $A$ to $C$ is a semicircle:
+\[
+180^\circ.
+\]
+
+Thus
+\[
+\text{arc }BC = 180^\circ-40^\circ=140^\circ.
+\]
+
+Arc length:
+\[
+\frac{140}{360}\cdot 90=35.
+\]
+
+\[
+\boxed{35}
+\]
+
+\section*{20. Tangent to a circle}
+
+Given
+\[
+x^2+6x+y^2+2y=15.
+\]
+Complete the square:
+\[
+(x+3)^2-9+(y+1)^2-1=15
+\]
+\[
+(x+3)^2+(y+1)^2=25.
+\]
+So the center is
+\[
+(-3,-1)
+\]
+and the radius is
+\[
+5.
+\]
+
+The tangent line has slope
+\[
+\frac34.
+\]
+Therefore the radius to the tangent point has slope
+\[
+-\frac43.
+\]
+
+A vector with slope $-\frac43$ and length $5$ is
+\[
+\langle 3,-4\rangle
+\]
+or
+\[
+\langle -3,4\rangle.
+\]
+
+Starting from the center $(-3,-1)$:
+\[
+(-3,-1)+(3,-4)=(0,-5),
+\]
+or
+\[
+(-3,-1)+(-3,4)=(-6,3).
+\]
+
+Since $b$ is negative,
+\[
+b=-5.
+\]
+
+\[
+\boxed{-5}
+\]
+
+\section*{21. Similar rectangular prisms}
+
+The scale factor from prism A to prism B is
+\[
+\frac{10}{4}=\frac52.
+\]
+
+Volumes scale by the cube of the linear scale factor:
+\[
+\left(\frac52\right)^3=\frac{125}{8}.
+\]
+
+So the volume of prism B is
+\[
+200\cdot \frac{125}{8}=25\cdot 125=3125.
+\]
+
+\[
+\boxed{3125}
+\]
+
+\section*{22. Square pyramid}
+
+Volume:
+\[
+V=\frac13 s^2 h=400,
+\]
+where $s$ is the base side length and $h$ is the height.
+
+So
+\[
+s^2h=1200.
+\]
+
+The slant height is $13$, so
+\[
+13^2=h^2+\left(\frac{s}{2}\right)^2.
+\]
+Thus
+\[
+169=h^2+\left(\frac{s}{2}\right)^2.
+\]
+
+Recognize the Pythagorean triple
+\[
+5,12,13.
+\]
+
+Try
+\[
+h=12,\quad \frac{s}{2}=5 \Rightarrow s=10.
+\]
+Check the volume:
+\[
+\frac13(10^2)(12)=\frac13(100)(12)=400.
+\]
+So this works.
+
+Surface area
+\[
+=\text{base area}+\text{lateral area}.
+\]
+
+Base area:
+\[
+10^2=100.
+\]
+
+Each triangular face:
+\[
+\frac12(10)(13)=65.
+\]
+There are $4$ faces, so lateral area:
+\[
+4(65)=260.
+\]
+
+Total surface area:
+\[
+100+260=360.
+\]
+
+\[
+\boxed{360}
+\]
+
+\section*{23. Means of two data sets}
+
+Let the sum of the four numbers in data set A be $S$. Then its mean is
+\[
+\frac{S}{4}.
+\]
+
+Data set B adds one more number $x$, so its mean is
+\[
+\frac{S+x}{5}.
+\]
+
+The difference is
+\[
+\frac{S}{4}-\frac{S+x}{5}
+=\frac{5S-4S-4x}{20}
+=\frac{S-4x}{20}.
+\]
+
+To maximize this difference, make the mean of A as large as possible and the added number as small as possible.
+
+Largest possible mean of A:
+\[
+20
+\]
+(by choosing all four numbers as $20$).
+
+Smallest possible added number:
+\[
+10.
+\]
+
+So the largest possible difference is
+\[
+20-\frac{20+20+20+20+10}{5}
+=20-\frac{90}{5}
+=20-18=2.
+\]
+
+\[
+\boxed{2}
+\]
+
+\section*{24. Frequency table}
+
+Data set A has values:
+\[
+1,2,3,4,5
+\]
+with frequencies
+\[
+2,5,6,5,2.
+\]
+
+This distribution is symmetric about $3$, so for set A:
+\[
+\text{mean}=3,\qquad \text{median}=3.
+\]
+
+Data set B multiplies every value by $2$, so the values become
+\[
+2,4,6,8,10.
+\]
+
+\textbf{I.} The difference between the mean and median of set B is $0$.
+
+Both mean and median also double:
+\[
+\text{mean}=6,\qquad \text{median}=6.
+\]
+Difference:
+\[
+6-6=0.
+\]
+So I is true.
+
+\textbf{II.} The standard deviation of set B equals that of set A.
+
+Multiplying every value by $2$ multiplies the standard deviation by $2$, not keeps it the same. So II is false.
+
+\textbf{III.} The range of set B is double the range of set A.
+
+Range of A:
+\[
+5-1=4.
+\]
+Range of B:
+\[
+10-2=8.
+\]
+Yes, it doubles. III is true.
+
+So I and III only.
+
+\[
+\boxed{\text{C}}
+\]
+
+
+\newpage
+\section*{25. Margin of error}
+
+The estimate is
+\[
+60\%\pm 5\%.
+\]
+So a plausible interval for the proportion of \textbf{11th graders} in at least one AP class is
+\[
+55\%\text{ to }65\%.
+\]
+
+\textbf{I.} ``It is not possible for just $40\%$ of the 11th graders ...''
+
+This is too strong. A sample estimate does not prove something is impossible. So I is not an appropriate conclusion.
+
+\textbf{II.} ``It is plausible that the proportion of \emph{all students at the school} ...''
+
+The sample was from \textbf{11th graders only}, so we cannot generalize to all students at the school. So II is not appropriate.
+
+\textbf{III.} ``If the sample size is increased, the margin of error will drop below $5\%$.''
+
+A larger sample size decreases the margin of error, so this is appropriate.
+
+Therefore only III is correct.
+
+\[
+\boxed{\text{C}}
+\]
+
+\section*{Final Answers}
+
+\begin{multicols}{3}
+\begin{enumerate}[label=\arabic*.]
+    \item $-4$
+    \item $\dfrac{bc}{b+c}$
+    \item $72$
+    \item $80$
+    \item $\dfrac{50}{33}$
+    \item $0.128$
+    \item $198$
+    \item D
+    \item $361$
+    \item D
+    \item C
+    \item $128$
+    \item $26$
+    \item A
+    \item $8$
+    \item $30$
+    \item A
+    \item $15$
+    \item $35$
+    \item $-5$
+    \item $3125$
+    \item $360$
+    \item $2$
+    \item C
+    \item C
+\end{enumerate}
+\end{multicols}
+
+\end{document}
